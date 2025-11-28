@@ -85,8 +85,22 @@ export default function Comparison() {
           </div>
         </div>
 
-        <div className="text-center">
-          <a href="#devis" className="bg-gradient-to-r from-blue-500 to-violet-500 text-white px-12 py-6 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105">
+        <div className="flex justify-center">
+          <a
+            href="#devis"
+            className="
+              w-full sm:w-auto
+              inline-flex items-center justify-center text-center
+              bg-gradient-to-r from-blue-500 to-violet-500
+              text-white px-6 py-4
+              rounded-full
+              text-base sm:text-lg font-semibold
+              shadow-xl shadow-blue-500/40 hover:shadow-blue-500/60
+              transition-all duration-300
+              hover:scale-105
+              whitespace-normal
+            "
+          >
             Protéger mon entreprise maintenant
           </a>
         </div>
