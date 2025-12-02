@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://assurance-cyber-securite.fr/sitemap.xml
