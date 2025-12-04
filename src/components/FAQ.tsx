@@ -35,7 +35,7 @@ export default function FAQ() {
   return (
     <>
 
-      <section className="relative px-4 py-20 lg:py-32 bg-gradient-to-b from-transparent via-blue-900/20 to-transparent">
+      <section id="faq" className="relative px-4 py-20 lg:py-32 bg-gradient-to-b from-transparent via-blue-900/20 to-transparent">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">

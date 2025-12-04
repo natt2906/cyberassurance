@@ -3,17 +3,34 @@
 
   <url>
     <loc>https://assurance-cyber-securite.fr/</loc>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://assurance-cyber-securite.fr/#devis</loc>
-    <priority>0.8</priority>
+    <loc>https://assurance-cyber-securite.fr/articles</loc>
+    <priority>0.90</priority>
   </url>
 
-  <url>
-    <loc>https://assurance-cyber-securite.fr/#faq</loc>
-    <priority>0.7</priority>
-  </url>
+  <!-- 20 ARTICLES -->
+  <url><loc>https://assurance-cyber-securite.fr/articles/assurance-cyber-cest-quoi</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/pourquoi-pme-cibles-cyberattaques</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/combien-coute-une-cyberattaque</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/combien-coute-une-assurance-cyber</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/erreurs-courantes-cyber-petites-entreprises</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/ransomware-que-faire</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/securiser-messagerie-pro</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/reconnaitre-mail-phishing</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/sauvegardes-strategie-pme</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/assurance-cyber-vs-antivirus</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/former-equipes-risque-cyber</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/freelances-independants-cyber-risques</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/artisans-btp-assurance-cyber</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/ecommerce-vol-donnees</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/cloud-et-responsabilite</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/cyber-et-rgpd</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/checklist-cyber-pme</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/comment-choisir-assurance-cyber</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/cas-reel-pme-attaque</loc></url>
+  <url><loc>https://assurance-cyber-securite.fr/articles/faq-assurance-cyber-complet</loc></url>
 
 </urlset>

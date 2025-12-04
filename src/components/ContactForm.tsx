@@ -64,8 +64,8 @@ export default function ContactForm() {
 
   return (
     <section
-      id="devis"
-      className="relative px-4 py-20 lg:py-32 bg-slate-950/60 border-t border-blue-500/20"
+      id="contact"
+      className="relative px-4 py-16 lg:py-24 bg-slate-950/80 scroll-mt-24"
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10 space-y-4">
