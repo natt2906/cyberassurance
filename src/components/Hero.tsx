@@ -1,6 +1,35 @@
 import { Shield, TrendingUp, Users } from 'lucide-react';
+import { trackEvent } from "../analytics/gtag";
+
 
 export default function Hero() {
+
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (!el) return;
+    const offset = 80;
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  const handleClickTarif = () => {
+    trackEvent("cta_click", {
+      location: "hero",
+      action: "obtenir_tarif",
+      label: "Obtenir un tarif en 30 secondes",
+    });
+    scrollToContact();
+  };
+
+  const handleClickExpert = () => {
+    trackEvent("cta_click", {
+      location: "hero",
+      action: "parler_expert",
+      label: "Parler à un expert cyber",
+    });
+    scrollToContact();
+  };
+
   return (
     <section className="relative overflow-hidden px-4 py-20 lg:py-32">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-violet-600/10 to-transparent"></div>
@@ -24,19 +53,18 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#contact"
+              <button onClick={handleClickTarif}
                 className="bg-gradient-to-r from-blue-500/80 to-violet-500/80 text-white px-8 py-4 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
                 Obtenir un tarif en 30 secondes
-              </a>
+              </button>
 
-              <a
-                href="#contact"
+              <button onClick={handleClickExpert}
+                
                 className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-sm font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Parler à un expert cyber
-              </a>
+              </button>
             </div>
 
             <div className="flex flex-wrap gap-8 pt-8">

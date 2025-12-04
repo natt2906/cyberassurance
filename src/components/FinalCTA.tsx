@@ -1,6 +1,36 @@
 import { Zap, Phone } from 'lucide-react';
+import { trackEvent } from "../analytics/gtag"; 
+
 
 export default function FinalCTA() {
+
+  // Scroll propre vers le formulaire
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (!el) return;
+    const offset = 80; // Décalage pour la navbar
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  const handleClickDevis = () => {
+    trackEvent("cta_click", {
+      location: "final_cta",
+      action: "obtenir_devis",
+      label: "Obtenir un devis rapide",
+    });
+    scrollToContact();
+  };
+
+  const handleClickAppel = () => {
+    trackEvent("cta_click", {
+      location: "final_cta",
+      action: "reserver_appel",
+      label: "Réserver un appel gratuit",
+    });
+    scrollToContact();
+  };
+
   return (
     <section className="relative px-4 py-20 lg:py-32">
       <div className="max-w-5xl mx-auto">
@@ -21,20 +51,20 @@ export default function FinalCTA() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#contact"
+                <button  onClick={handleClickDevis}
+                  
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105"
                 >
                   <Zap className="w-4 h-4" />
                   Obtenir un devis rapide
-                </a>
-                <a
-                  href="#contact"
+                </button>
+                <button onClick={handleClickAppel}
+                  
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-white/10 text-sm font-semibold text-blue-100 border border-blue-200/30 hover:bg-white/20 transition-all duration-300"
                 >
                   <Phone className="w-4 h-4" />
                   Réserver un appel gratuit
-                </a>
+                </button>
               </div>
 
 

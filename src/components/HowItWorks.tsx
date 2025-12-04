@@ -1,4 +1,5 @@
 import { ClipboardList, Zap, CheckCircle } from 'lucide-react';
+import { trackEvent } from "../analytics/gtag";
 
 export default function HowItWorks() {
   const steps = [
@@ -21,6 +22,23 @@ export default function HowItWorks() {
       description: "Contre les attaques et l'arrêt d'activité"
     }
   ];
+
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (!el) return;
+    const offset = 80;
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  const handleClickTarif = () => {
+    trackEvent("cta_click", {
+      location: "how_it_works",
+      action: "obtenir_tarif",
+      label: "Obtenir mon tarif maintenant",
+    });
+    scrollToContact();
+  };
 
   return (
     <section className="relative px-4 py-20 lg:py-32">
@@ -58,12 +76,12 @@ export default function HowItWorks() {
         </div>
 
         <div className="text-center">
-          <a
-            href="#contact"
+          <button onClick={handleClickTarif}
+            
             className="bg-gradient-to-r from-blue-500 to-violet-500 text-white px-8 py-3 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
           >
             Obtenir mon tarif maintenant
-          </a>
+          </button>
         </div>
 
       </div>
