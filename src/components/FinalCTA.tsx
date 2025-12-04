@@ -22,14 +22,14 @@ export default function FinalCTA() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="#devis"
+                  href="#contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105"
                 >
                   <Zap className="w-4 h-4" />
                   Obtenir un devis rapide
                 </a>
                 <a
-                  href="#devis"
+                  href="#contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-white/10 text-sm font-semibold text-blue-100 border border-blue-200/30 hover:bg-white/20 transition-all duration-300"
                 >
                   <Phone className="w-4 h-4" />

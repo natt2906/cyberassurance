@@ -87,7 +87,7 @@ export default function Comparison() {
 
         <div className="flex justify-center">
           <a
-            href="#devis"
+            href="#contact"
             className="
               w-full sm:w-auto
               inline-flex items-center justify-center text-center

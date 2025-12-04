@@ -25,14 +25,14 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#devis"
+                href="#contact"
                 className="bg-gradient-to-r from-blue-500/80 to-violet-500/80 text-white px-8 py-4 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
                 Obtenir un tarif en 30 secondes
               </a>
 
               <a
-                href="#devis"
+                href="#contact"
                 className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-sm font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Parler à un expert cyber

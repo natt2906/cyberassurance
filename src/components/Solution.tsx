@@ -58,7 +58,7 @@ export default function Solution() {
 
         <div className="text-center">
           <a
-            href="#devis"
+            href="#contact"
             className="bg-gradient-to-r from-blue-500 to-violet-500 text-white px-8 py-3 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
             Voir nos garanties
             <span className="text-2xl">→</span>
