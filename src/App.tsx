@@ -1,6 +1,5 @@
-
 import { Routes, Route } from "react-router-dom";
-
+import PageViewTracker from "./analytics/PageViewTracker";
 // Page liste des articles
 import ArticlesIndex from "./components/pages/ArticlesIndex";
 import HomePage from "./components/pages/HomePage";
@@ -27,100 +26,100 @@ import ArticleChoisirAssurance from "./components/pages/ArticleChoisirAssurance"
 import ArticleCasReelPME from "./components/pages/ArticleCasReelPME";
 import ArticleFAQAssuranceCyber from "./components/pages/ArticleFAQAssuranceCyber";
 
-// PAGE D'ACCUEIL (landing)
-
-
 function App() {
   return (
-    <Routes>
-      {/* Landing */}
-     <Route path="/" element={<HomePage />} />
+    <>
+      <PageViewTracker />
+      <Routes>
+        {/* Landing */}
+        <Route path="/" element={<HomePage />} />
 
-      {/* Page liste articles */}
-      <Route path="/articles" element={<ArticlesIndex />} />
+        {/* Page liste articles */}
+        <Route path="/articles" element={<ArticlesIndex />} />
 
-      {/* Pages articles individuelles */}
-      <Route
-        path="/articles/assurance-cyber-cest-quoi"
-        element={<ArticleAssuranceCyberCestQuoi />}
-      />
-      <Route
-        path="/articles/pourquoi-pme-cibles-cyberattaques"
-        element={<ArticlePourquoiPMECibles />}
-      />
-      <Route
-        path="/articles/combien-coute-une-cyberattaque"
-        element={<ArticleCoutCyberattaque />}
-      />
-      <Route
-        path="/articles/combien-coute-une-assurance-cyber"
-        element={<ArticleCoutAssuranceCyber />}
-      />
-      <Route
-        path="/articles/erreurs-courantes-cyber-petites-entreprises"
-        element={<ArticleErreursCourantes />}
-      />
-      <Route
-        path="/articles/ransomware-que-faire"
-        element={<ArticleRansomwareQueFaire />}
-      />
-      <Route
-        path="/articles/securiser-messagerie-pro"
-        element={<ArticleSecuriserMessageriePro />}
-      />
-      <Route
-        path="/articles/reconnaitre-mail-phishing"
-        element={<ArticlePhishingMail />}
-      />
-      <Route
-        path="/articles/sauvegardes-strategie-pme"
-        element={<ArticleSauvegardesPME />}
-      />
-      <Route
-        path="/articles/assurance-cyber-vs-antivirus"
-        element={<ArticleCyberVsAntivirus />}
-      />
-      <Route
-        path="/articles/former-equipes-risque-cyber"
-        element={<ArticleFormerEquipes />}
-      />
-      <Route
-        path="/articles/freelances-independants-cyber-risques"
-        element={<ArticleFreelancesIndependants />}
-      />
-      <Route
-        path="/articles/artisans-btp-assurance-cyber"
-        element={<ArticleArtisansBTP />}
-      />
-      <Route
-        path="/articles/ecommerce-vol-donnees"
-        element={<ArticleEcommerce />}
-      />
-      <Route
-        path="/articles/cloud-et-responsabilite"
-        element={<ArticleCloudResponsabilite />}
-      />
-      <Route
-        path="/articles/cyber-et-rgpd"
-        element={<ArticleCyberRGPD />}
-      />
-      <Route
-        path="/articles/checklist-cyber-pme"
-        element={<ArticleChecklistPME />}
-      />
-      <Route
-        path="/articles/comment-choisir-assurance-cyber"
-        element={<ArticleChoisirAssurance />}
-      />
-      <Route
-        path="/articles/cas-reel-pme-attaque"
-        element={<ArticleCasReelPME />}
-      />
-      <Route
-        path="/articles/faq-assurance-cyber-complet"
-        element={<ArticleFAQAssuranceCyber />}
-      />
-    </Routes>
+        {/* Pages articles individuelles */}
+        <Route
+          path="/articles/assurance-cyber-cest-quoi"
+          element={<ArticleAssuranceCyberCestQuoi />}
+        />
+        <Route
+          path="/articles/pourquoi-pme-cibles-cyberattaques"
+          element={<ArticlePourquoiPMECibles />}
+        />
+        <Route
+          path="/articles/combien-coute-une-cyberattaque"
+          element={<ArticleCoutCyberattaque />}
+        />
+        <Route
+          path="/articles/combien-coute-une-assurance-cyber"
+          element={<ArticleCoutAssuranceCyber />}
+        />
+        <Route
+          path="/articles/erreurs-courantes-cyber-petites-entreprises"
+          element={<ArticleErreursCourantes />}
+        />
+        <Route
+          path="/articles/ransomware-que-faire"
+          element={<ArticleRansomwareQueFaire />}
+        />
+        <Route
+          path="/articles/securiser-messagerie-pro"
+          element={<ArticleSecuriserMessageriePro />}
+        />
+        <Route
+          path="/articles/reconnaitre-mail-phishing"
+          element={<ArticlePhishingMail />}
+        />
+        <Route
+          path="/articles/sauvegardes-strategie-pme"
+          element={<ArticleSauvegardesPME />}
+        />
+        <Route
+          path="/articles/assurance-cyber-vs-antivirus"
+          element={<ArticleCyberVsAntivirus />}
+        />
+        <Route
+          path="/articles/former-equipes-risque-cyber"
+          element={<ArticleFormerEquipes />}
+        />
+        <Route
+          path="/articles/freelances-independants-cyber-risques"
+          element={<ArticleFreelancesIndependants />}
+        />
+        <Route
+          path="/articles/artisans-btp-assurance-cyber"
+          element={<ArticleArtisansBTP />}
+        />
+        <Route
+          path="/articles/ecommerce-vol-donnees"
+          element={<ArticleEcommerce />}
+        />
+        <Route
+          path="/articles/cloud-et-responsabilite"
+          element={<ArticleCloudResponsabilite />}
+        />
+        <Route
+          path="/articles/cyber-et-rgpd"
+          element={<ArticleCyberRGPD />}
+        />
+        <Route
+          path="/articles/checklist-cyber-pme"
+          element={<ArticleChecklistPME />}
+        />
+        <Route
+          path="/articles/comment-choisir-assurance-cyber"
+          element={<ArticleChoisirAssurance />}
+        />
+        <Route
+          path="/articles/cas-reel-pme-attaque"
+          element={<ArticleCasReelPME />}
+        />
+        <Route
+          path="/articles/faq-assurance-cyber-complet"
+          element={<ArticleFAQAssuranceCyber />}
+        />
+      </Routes>
+    </>
   );
 }
 
