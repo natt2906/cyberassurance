@@ -10,6 +10,8 @@ import Comparison from "../../components/Comparison";
 import FAQ from "../../components/FAQ";
 import ContactForm from "../../components/ContactForm";
 import FinalCTA from "../../components/FinalCTA";
+import SocialSection from "../../components/SocialSection";
+
 
 
 export default function HomePage() {
@@ -26,6 +28,7 @@ export default function HomePage() {
         <HowItWorks />
         <Testimonials />
         <Comparison />
+        <SocialSection />  
         <FAQ />
         <ContactForm />
         <FinalCTA />
