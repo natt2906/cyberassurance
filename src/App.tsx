@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import PageViewTracker from "./analytics/PageViewTracker";
+import SiteJsonLd from "./components/seo/SiteJsonLd";
 // Page liste des articles
 import ArticlesIndex from "./components/pages/ArticlesIndex";
 import HomePage from "./components/pages/HomePage";
@@ -30,6 +31,7 @@ function App() {
   return (
     <>
       <PageViewTracker />
+      <SiteJsonLd />
       <Routes>
         {/* Landing */}
         <Route path="/" element={<HomePage />} />

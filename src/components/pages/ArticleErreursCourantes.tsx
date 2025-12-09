@@ -1,21 +1,26 @@
 import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
+import ArticleJsonLd from "../seo/ArticleJsonLd";
+import ArticleSeoMeta from "../seo/ArticleSeoMeta";
 
 export default function ArticleErreursCourantes() {
   return (
     <div className="min-h-screen bg-[#020617] text-white">
       <MainNavbar />
       <main className="px-4 pt-24 pb-16">
+        <ArticleJsonLd slug="erreurs-courantes-cyber-petites-entreprises" />
+        <ArticleSeoMeta slug="erreurs-courantes-cyber-petites-entreprises" />
         <div className="max-w-4xl mx-auto">
-          <p className="inline-flex items-center px-3 py-1 mb-6 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-200 border border-blue-500/40">
-            Article · Assurance cyber
-          </p>
+        <p className="inline-flex items-center px-3 py-1 mb-6 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-200 border border-blue-500/40">
+          Article · Assurance cyber
+        </p>
+
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             7 erreurs de cybersécurité que font (presque) toutes les petites entreprises
           </h1>
 
-          <img
+          <img loading="lazy"
             src="/articles/erreurs-courantes-cyber-petites-entreprises.png"
             alt="Illustration pour cet article d’assurance cyber"
             className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}

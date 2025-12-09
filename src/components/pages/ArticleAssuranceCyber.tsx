@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import BackToArticles from "../ui/BackToAricles";
+import ArticleSeoMeta from "../seo/ArticleSeoMeta";
 
 export default function ArticleAssuranceCyber() {
   return (
     <div className="min-h-screen bg-[#020617] text-white">
+      <ArticleSeoMeta slug="assurance-cyber-cest-quoi" />
       {/* Header avec fil d'Ariane */}
       <header className="w-full bg-gradient-to-r from-slate-900/80 via-blue-900/50 to-slate-900/80 border-b border-white/10 backdrop-blur">
         <div className="max-w-5xl mx-auto px-4 py-5 flex flex-col gap-3">

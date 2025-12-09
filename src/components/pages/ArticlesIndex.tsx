@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import MainNavbar from "../layout/MainNavbar";
 import { articlesMeta } from "../../data/articlesMeta";
+import SeoHead from "../seo/SeoHead";
+import { baseSiteUrl } from "../../data/articlesSeo";
 
 export default function ArticlesIndex() {
   return (
@@ -8,6 +10,12 @@ export default function ArticlesIndex() {
       <MainNavbar />
 
       <main className="px-4 pt-24 pb-16">
+        <SeoHead
+          title="Articles & conseils sur l’assurance cyber | Assurance Cyber Sécurité"
+          description="Guides et conseils pour TPE/PME : assurance cyber, ransomware, phishing, sauvegardes, RGPD, messagerie et choix de garantie."
+          canonical={`${baseSiteUrl}/articles`}
+          ogImage={`${baseSiteUrl}/og-image.png`}
+        />
         <div className="max-w-5xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-blue-300/80 mb-3">
             Ressources
@@ -26,10 +34,10 @@ export default function ArticlesIndex() {
               <Link
                 key={art.slug}
                 to={`/articles/${art.slug}`}
-                className="group bg-white/5 rounded-2xl overflow-hidden hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer"
+                className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer"
               >
                 <div className="h-40 w-full overflow-hidden">
-                  <img
+                  <img loading="lazy"
                     src={`/articles/${art.slug}.png`}
                     alt={art.title}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" style={{ clipPath: "inset(2%)" }}

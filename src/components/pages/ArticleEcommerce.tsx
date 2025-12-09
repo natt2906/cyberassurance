@@ -1,21 +1,26 @@
 import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
+import ArticleJsonLd from "../seo/ArticleJsonLd";
+import ArticleSeoMeta from "../seo/ArticleSeoMeta";
 
 export default function ArticleEcommerce() {
   return (
     <div className="min-h-screen bg-[#020617] text-white">
       <MainNavbar />
       <main className="px-4 pt-24 pb-16">
+        <ArticleJsonLd slug="ecommerce-vol-donnees" />
+        <ArticleSeoMeta slug="ecommerce-vol-donnees" />
         <div className="max-w-4xl mx-auto">
-          <p className="inline-flex items-center px-3 py-1 mb-6 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-200 border border-blue-500/40">
-            Article · Assurance cyber
-          </p>
+        <p className="inline-flex items-center px-3 py-1 mb-6 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-200 border border-blue-500/40">
+          Article · Assurance cyber
+        </p>
+
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             E-commerce & vol de données : comment limiter les dégâts ?
           </h1>
 
-          <img
+          <img loading="lazy"
             src="/articles/ecommerce-vol-donnees.png"
             alt="Illustration pour cet article d’assurance cyber"
             className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
