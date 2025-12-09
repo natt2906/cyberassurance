@@ -17,6 +17,13 @@ export default function ArticlePhishingMail() {
             Comment reconnaître un mail de phishing en moins de 10 secondes
           </h1>
 
+          <img
+            src="/articles/reconnaitre-mail-phishing.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Des signaux concrets pour éviter de cliquer au mauvais endroit.
           </p>

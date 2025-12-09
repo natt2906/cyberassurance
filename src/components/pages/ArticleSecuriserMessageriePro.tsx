@@ -16,6 +16,13 @@ export default function ArticleSecuriserMessageriePro() {
             Comment sécuriser votre messagerie professionnelle en 5 étapes
           </h1>
 
+          <img
+            src="/articles/securiser-messagerie-pro.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             La boîte mail est souvent la porte d’entrée principale d’une attaque.
           </p>

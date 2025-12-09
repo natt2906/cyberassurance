@@ -15,6 +15,13 @@ export default function ArticleCoutCyberattaque() {
             Combien coûte réellement une cyberattaque pour une petite entreprise ?
           </h1>
 
+          <img
+            src="/articles/combien-coute-une-cyberattaque.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Au-delà de la rançon, les coûts cachés peuvent mettre une PME à genoux.
           </p>

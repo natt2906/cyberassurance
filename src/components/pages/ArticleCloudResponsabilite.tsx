@@ -15,6 +15,13 @@ export default function ArticleCloudResponsabilite() {
             Cloud, logiciels en ligne et responsabilité : qui est responsable en cas d’attaque ?
           </h1>
 
+          <img
+            src="/articles/cloud-et-responsabilite.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Même si vos données sont chez un prestataire, vous gardez une part de responsabilité.
           </p>

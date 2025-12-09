@@ -15,6 +15,13 @@ export default function ArticleArtisansBTP() {
             Artisans du BTP : avez-vous vraiment besoin d’une assurance cyber ?
           </h1>
 
+          <img
+            src="/articles/artisans-btp-assurance-cyber.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Chantiers, devis, factures : votre activité dépend plus du numérique que vous ne le pensez.
           </p>

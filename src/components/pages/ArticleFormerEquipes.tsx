@@ -16,6 +16,13 @@ export default function ArticleFormerEquipes() {
             Former ses équipes au risque cyber : le meilleur pare-feu humain
           </h1>
 
+          <img
+            src="/articles/former-equipes-risque-cyber.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Un salarié sensibilisé peut éviter une catastrophe en un seul clic.
           </p>

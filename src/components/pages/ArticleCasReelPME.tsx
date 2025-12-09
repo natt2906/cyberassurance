@@ -15,6 +15,13 @@ export default function ArticleCasReelPME() {
             Cas concret : comment une PME a géré une cyberattaque majeure
           </h1>
 
+          <img
+            src="/articles/cas-reel-pme-attaque.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Un scénario inspiré de situations réelles, vu côté dirigeant.
           </p>

@@ -15,6 +15,13 @@ export default function ArticleEcommerce() {
             E-commerce & vol de données : comment limiter les dégâts ?
           </h1>
 
+          <img
+            src="/articles/ecommerce-vol-donnees.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Un site marchand piraté peut coûter des années de confiance client.
           </p>

@@ -15,6 +15,13 @@ export default function ArticleErreursCourantes() {
             7 erreurs de cybersécurité que font (presque) toutes les petites entreprises
           </h1>
 
+          <img
+            src="/articles/erreurs-courantes-cyber-petites-entreprises.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Des réflexes simples peuvent déjà vous mettre à l’abri de nombreux risques.
           </p>

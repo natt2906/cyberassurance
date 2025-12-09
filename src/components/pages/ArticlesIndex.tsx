@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import MainNavbar from "../layout/MainNavbar";
 import { articlesMeta } from "../../data/articlesMeta";
 
-
-
 export default function ArticlesIndex() {
   return (
     <div className="min-h-screen bg-[#020617] text-white">
@@ -28,15 +26,25 @@ export default function ArticlesIndex() {
               <Link
                 key={art.slug}
                 to={`/articles/${art.slug}`}
-                className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-400/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer"
+                className="group bg-white/5 rounded-2xl overflow-hidden hover:border-blue-500/60 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer"
               >
-                <h2 className="text-xl lg:text-2xl font-semibold text-white mb-3 group-hover:text-blue-200">
-                  {art.title}
-                </h2>
+                <div className="h-40 w-full overflow-hidden">
+                  <img
+                    src={`/articles/${art.slug}.png`}
+                    alt={art.title}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" style={{ clipPath: "inset(2%)" }}
+                  />
+                </div>
 
-                <span className="inline-flex items-center text-sm font-semibold text-blue-300 group-hover:text-blue-200">
-                  Lire l’article →
-                </span>
+                <div className="p-5">
+                  <h2 className="text-xl lg:text-2xl font-semibold text-white mb-3 group-hover:text-blue-200">
+                    {art.title}
+                  </h2>
+
+                  <span className="inline-flex items-center text-sm font-semibold text-blue-300 group-hover:text-blue-200">
+                    Lire l’article →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

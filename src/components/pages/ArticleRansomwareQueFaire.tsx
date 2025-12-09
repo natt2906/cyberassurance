@@ -17,6 +17,13 @@ export default function ArticleRansomwareQueFaire() {
             Ransomware : que faire si votre entreprise est bloquée ?
           </h1>
 
+          <img
+            src="/articles/ransomware-que-faire.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Les bons réflexes dans les premières heures pour limiter les dégâts.
           </p>

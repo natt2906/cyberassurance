@@ -17,6 +17,13 @@ export default function ArticlePourquoiPMECibles() {
             Pourquoi les PME sont devenues la cible n°1 des cyberattaques
           </h1>
 
+          <img
+            src="/articles/pourquoi-pme-cibles-cyberattaques.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Les hackers ont changé de stratégie : ils préfèrent désormais les petites structures aux grands groupes.
           </p>

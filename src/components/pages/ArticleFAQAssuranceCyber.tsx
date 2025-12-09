@@ -16,6 +16,13 @@ export default function ArticleFAQAssuranceCyber() {
             FAQ complète : tout ce que vous avez toujours voulu savoir sur l’assurance cyber
           </h1>
 
+          <img
+            src="/articles/faq-assurance-cyber-complet.png"
+            alt="Illustration pour cet article d’assurance cyber"
+            className="w-full max-h-96 object-cover object-center rounded-2xl mb-8" style={{ clipPath: "inset(2%)" }}
+          />
+
+
           <p className="text-sm text-blue-300 mb-8">
             Une réponse claire aux questions les plus fréquentes des dirigeants.
           </p>

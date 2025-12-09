@@ -5,52 +5,53 @@ export default function ArticleAssuranceCyber() {
   return (
     <div className="min-h-screen bg-[#020617] text-white">
       {/* Header avec fil d'Ariane */}
-      <header className="w-full border-b border-white/10 bg-black/40 backdrop-blur">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-2">
-          {/* Fil d'Ariane */}
-          <nav
-            className="text-xs sm:text-sm text-blue-200/80"
-            aria-label="Fil d'ariane"
-          >
-            <ol className="flex flex-wrap items-center gap-1 sm:gap-2">
-              <li>
-                <Link
-                  to="/"
-                  className="hover:text-white hover:underline underline-offset-2"
-                >
-                  Accueil
-                </Link>
-              </li>
-              <li className="opacity-60">/</li>
-              <li>
-                <Link
-                  to="/#articles"
-                  className="hover:text-white hover:underline underline-offset-2"
-                >
-                  Articles
-                </Link>
-              </li>
-              <li className="opacity-60">/</li>
-              <li
-                aria-current="page"
-                className="text-blue-50 font-semibold line-clamp-1"
-              >
-                Assurance cyber : c’est quoi ?
-              </li>
-            </ol>
-          </nav>
-
+      <header className="w-full bg-gradient-to-r from-slate-900/80 via-blue-900/50 to-slate-900/80 border-b border-white/10 backdrop-blur">
+        <div className="max-w-5xl mx-auto px-4 py-5 flex flex-col gap-3">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] sm:text-xs text-blue-300/80 uppercase tracking-[0.2em]">
+            <span className="inline-flex items-center gap-2 px-3 py-1 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] bg-blue-500/10 text-blue-200 border border-blue-500/40 rounded-full">
+              <span className="text-[13px]">🛡️</span>
               Article · Assurance cyber
             </span>
             <Link
               to="/"
-              className="text-[11px] sm:text-xs text-blue-200 hover:text-white hover:underline underline-offset-2"
+              className="text-[11px] sm:text-xs text-blue-200 hover:text-white hover:underline underline-offset-4 transition-colors"
             >
               ← Retour à la page principale
             </Link>
           </div>
+
+          {/* Fil d'Ariane plus riche */}
+          <nav aria-label="Fil d'ariane">
+            <ol className="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+              <li>
+                <Link
+                  to="/"
+                  className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-blue-100 hover:border-blue-400/60 hover:text-white transition-colors"
+                >
+                  <span className="text-[12px]">🏠</span>
+                  Accueil
+                </Link>
+              </li>
+              <li className="text-blue-300/60">›</li>
+              <li>
+                <Link
+                  to="/#articles"
+                  className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-blue-100 hover:border-blue-400/60 hover:text-white transition-colors"
+                >
+                  <span className="text-[12px]">📚</span>
+                  Articles
+                </Link>
+              </li>
+              <li className="text-blue-300/60">›</li>
+              <li
+                aria-current="page"
+                className="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/60 text-blue-50 shadow shadow-blue-900/40"
+              >
+                <span className="text-[12px]">🧭</span>
+                Assurance cyber : c’est quoi ?
+              </li>
+            </ol>
+          </nav>
         </div>
       </header>
 
@@ -126,7 +127,7 @@ export default function ArticleAssuranceCyber() {
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2 mb-8">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+            <div className="bg-white/5 rounded-2xl p-5">
               <h3 className="font-semibold text-lg mb-2">1. Les frais techniques</h3>
               <p className="text-blue-200 text-sm leading-relaxed">
                 Intervention d’experts pour analyser l’attaque, nettoyer vos systèmes, réinstaller les logiciels,
@@ -134,7 +135,7 @@ export default function ArticleAssuranceCyber() {
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+            <div className="bg-white/5 rounded-2xl p-5">
               <h3 className="font-semibold text-lg mb-2">2. Les pertes financières</h3>
               <p className="text-blue-200 text-sm leading-relaxed">
                 Indemnisation de la perte de chiffre d’affaires liée à l’arrêt de votre activité, ainsi que des
@@ -142,7 +143,7 @@ export default function ArticleAssuranceCyber() {
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+            <div className="bg-white/5 rounded-2xl p-5">
               <h3 className="font-semibold text-lg mb-2">3. La responsabilité & le juridique</h3>
               <p className="text-blue-200 text-sm leading-relaxed">
                 Prise en charge des frais d’avocat, des procédures et, selon les contrats, des conséquences
@@ -150,7 +151,7 @@ export default function ArticleAssuranceCyber() {
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+            <div className="bg-white/5 rounded-2xl p-5">
               <h3 className="font-semibold text-lg mb-2">4. L’accompagnement humain</h3>
               <p className="text-blue-200 text-sm leading-relaxed">
                 Accès à une cellule de crise, à des experts en cybersécurité et à des conseillers pour gérer la

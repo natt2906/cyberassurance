@@ -15,6 +15,15 @@ export default function ArticleAssuranceCyberCestQuoi() {
             Assurance cyber : c’est quoi ?
           </h1>
 
+          <div className="mb-8 flex justify-center">
+            <img
+              src="/articles/assurance-cyber-cest-quoi.png"
+              alt="Illustration pour cet article d’assurance cyber"
+              className="w-full max-h-[520px] max-w-5xl object-contain rounded-2xl"
+            />
+          </div>
+
+
           <p className="text-sm text-blue-300 mb-8">
             Comprendre enfin ce qu’est vraiment une assurance cyber quand on est TPE, PME ou indépendant.
           </p>
