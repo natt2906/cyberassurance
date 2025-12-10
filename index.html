@@ -100,6 +100,14 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (document.referrer && document.referrer.includes("instagram.com")) {
+        window.location.href =
+          "https://www.assurance-cyber-securite.fr/?utm_source=instagram&utm_medium=bio&utm_campaign=cyber2025";
+      }
+    });
+  </script>
 </body>
 
 </html>
