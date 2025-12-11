@@ -21,6 +21,11 @@ export default async function handler(req: any, res: any) {
         ? JSON.parse(req.body)
         : req.body || (await req.json?.());
 
+    // Honeypot anti-bot : si rempli, on ne forward pas au webhook (réponse OK silencieuse)
+    if (payload?.honeypot || payload?.hp) {
+      return res.status(200).json({ ok: true, skipped: true });
+    }
+
     // Appel Discord côté serveur => aucun problème CORS
     const discordRes = await fetch(webhookUrl, {
       method: "POST",

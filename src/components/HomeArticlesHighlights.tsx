@@ -52,6 +52,17 @@ export default function HomeArticlesHighlights() {
             <p className="text-blue-200 mt-2">
               Découvrez trois articles indispensables pour comprendre l’assurance cyber, anticiper les cyberattaques et sécuriser efficacement votre PME.
             </p>
+            <div className="flex flex-wrap gap-3 mt-3 text-sm text-blue-200">
+              <Link to="/articles/combien-coute-une-cyberattaque" className="underline underline-offset-4 hover:text-white">
+                Coût d’une cyberattaque
+              </Link>
+              <Link to="/articles/ransomware-que-faire" className="underline underline-offset-4 hover:text-white">
+                Réagir à un ransomware
+              </Link>
+              <Link to="/articles/checklist-cyber-pme" className="underline underline-offset-4 hover:text-white">
+                Checklist sécurité PME
+              </Link>
+            </div>
           </div>
           <Link
             to="/articles"
@@ -71,6 +82,8 @@ export default function HomeArticlesHighlights() {
               <div className="h-36 w-full overflow-hidden">
                 <img
                   loading="lazy"
+                  width="400"
+                  height="225"
                   src={`/articles/${art.slug}.png`}
                   alt={art.title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"

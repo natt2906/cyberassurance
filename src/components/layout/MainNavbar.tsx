@@ -19,7 +19,10 @@ export default function MainNavbar() {
     <header className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-slate-950/85 via-slate-900/75 to-slate-950/85 backdrop-blur border-b border-white/10 shadow-lg shadow-blue-900/30">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo / nom */}
-        <Link to="/" className="text-sm sm:text-base font-semibold text-white tracking-tight">
+        <Link
+          to="/"
+          className="text-2xl sm:text-3xl font-semibold text-white tracking-tight mb-[10px]"
+        >
           Assurance Cyber Sécurité
         </Link>
 

@@ -32,10 +32,19 @@ export default function ContactForm() {
               value: String(formData.get('message') || 'Aucun message renseigné.').slice(0, 1024)
             }
           ],
+          footer: {
+            text: "Source: formulaire principal",
+          },
           timestamp: new Date().toISOString()
         }
       ]
     };
+
+    // Honeypot anti-bot
+    const honeypot = String(formData.get('hp') || '').trim();
+    if (honeypot) {
+      return;
+    }
 
     try {
       await sendLead(payload);
@@ -180,17 +189,19 @@ export default function ContactForm() {
               </div>
 
               <div className="md:col-span-2 flex flex-col gap-2">
-                <label className="text-sm font-medium text-blue-100" htmlFor="message">
-                  Votre contexte ou question principale
-                </label>
-                <textarea
-                  id="message"
+            <label className="text-sm font-medium text-blue-100" htmlFor="message">
+              Votre contexte ou question principale
+            </label>
+            <textarea
+              id="message"
                   name="message"
                   rows={4}
                   className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 resize-none"
-                  placeholder="Dites-nous en quelques mots comment votre activité dépend de vos outils (facturation, logiciel, mails…) et ce qui vous inquiète le plus."
-                ></textarea>
-              </div>
+                placeholder="Dites-nous en quelques mots comment votre activité dépend de vos outils (facturation, logiciel, mails…) et ce qui vous inquiète le plus."
+              ></textarea>
+              {/* Honeypot anti-bot */}
+              <input type="text" name="hp" className="hidden" tabIndex={-1} autoComplete="off" />
+            </div>
 
               {error && (
                 <div className="md:col-span-2 text-sm text-red-400 bg-red-950/40 border border-red-500/40 rounded-xl px-4 py-3">

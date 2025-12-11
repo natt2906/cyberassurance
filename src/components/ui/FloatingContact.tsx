@@ -33,8 +33,15 @@ export default function FloatingContact() {
     setError(null);
     setIsSubmitting(true);
 
+    const honeypotInput = (event.currentTarget.elements.namedItem("hp") as HTMLInputElement | null)?.value?.trim();
+    if (honeypotInput) {
+      setIsSubmitting(false);
+      return;
+    }
+
     const payload = {
       content: null,
+      honeypot: honeypotInput,
       embeds: [
         {
           title: "📥 Nouvelle demande de devis cyber (bouton flottant)",
@@ -48,6 +55,9 @@ export default function FloatingContact() {
             { name: "Secteur d'activité", value: formValues.sector || "-", inline: true },
             { name: "Contexte / question", value: (formValues.message || "Aucun message renseigné.").slice(0, 1024) },
           ],
+          footer: {
+            text: "Source: bouton flottant",
+          },
           timestamp: new Date().toISOString(),
         },
       ],
@@ -185,6 +195,8 @@ export default function FloatingContact() {
                   className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 resize-none"
                   placeholder="Votre contexte ou question principale"
                 />
+                {/* Honeypot anti-bot */}
+                <input type="text" name="hp" className="hidden" tabIndex={-1} autoComplete="off" />
 
                 {error && (
                   <div className="text-sm text-red-400 bg-red-950/40 border border-red-500/40 rounded-xl px-4 py-3">

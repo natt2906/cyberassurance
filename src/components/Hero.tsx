@@ -52,17 +52,17 @@ export default function Hero() {
               d&apos;activité et vos données.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
               <button
                 onClick={handleClickTarif}
-                className="bg-gradient-to-r from-blue-500/80 to-violet-500/80 text-white px-8 py-4 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-blue-500/80 to-violet-500/80 text-white px-10 py-4 rounded-full text-[20px] font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
-                Obtenir un tarif en 30 secondes
+                Obtenir un tarif
               </button>
 
               <button
                 onClick={handleClickExpert}
-                className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-sm font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
+                className="w-full bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-full text-[20px] font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Parler à un expert cyber
               </button>
@@ -93,7 +93,10 @@ export default function Hero() {
           {/* ILLUSTRATION / IMAGE */}
           <div className="relative">
             <div className="relative z-10 bg-gradient-to-br from-blue-500/20 to-violet-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-4 lg:p-8 flex items-center justify-center">
-              <img loading="lazy"
+              <img
+                loading="lazy"
+                width="1200"
+                height="630"
                 src="/og-image.png"  // <= fichier placé dans public/
                 alt="Illustration cyber sécurité et assurance pour PME"
                 className="rounded-2xl shadow-2xl max-h-[420px] w-auto object-cover"
