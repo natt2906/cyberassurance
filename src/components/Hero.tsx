@@ -62,7 +62,7 @@ export default function Hero() {
 
               <button
                 onClick={handleClickExpert}
-                className="w-full bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-full text-[20px] font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center"
+                className="w-full bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-full text-[20px] font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 inline-flex items-center justify-center"
               >
                 Parler à un expert cyber
               </button>
