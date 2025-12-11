@@ -5,6 +5,7 @@ import CookieBanner from "./components/ui/CookieBanner";
 import HashScroll from "./components/layout/HashScroll";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import FloatingContact from "./components/ui/FloatingContact";
+import GoogleAdsTag from "./components/seo/GoogleAdsTag";
 // Page liste des articles
 import ArticlesIndex from "./components/pages/ArticlesIndex";
 import HomePage from "./components/pages/HomePage";
@@ -40,6 +41,7 @@ function App() {
       <HashScroll />
       <ScrollToTop />
       <FloatingContact />
+      <GoogleAdsTag />
       <Routes>
         {/* Landing */}
         <Route path="/" element={<HomePage />} />
