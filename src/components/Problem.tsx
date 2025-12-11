@@ -39,11 +39,11 @@ export default function Problem() {
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="relative group"
+              className="relative group h-full"
             >
               <div className="absolute inset-0 bg-gradient-to-br opacity-20 group-hover:opacity-30 transition-opacity rounded-2xl blur-xl"
                    style={{ background: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }}></div>
-              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-white/30 transition-all duration-300">
+              <div className="relative h-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-white/30 transition-all duration-300 flex flex-col">
                 <div className={`inline-flex p-4 bg-gradient-to-br ${problem.color} rounded-xl mb-6`}>
                   <problem.icon className="w-8 h-8 text-white" />
                 </div>

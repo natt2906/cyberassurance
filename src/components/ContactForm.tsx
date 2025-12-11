@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import { sendLead } from '../utils/sendLead';
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,18 +38,7 @@ export default function ContactForm() {
     };
 
     try {
-      const response = await fetch('/api/discord-webhook', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Erreur API interne: ${response.status} ${response.statusText}`);
-      }
-
+      await sendLead(payload);
       setHasSubmitted(true);
       form.reset();
     } catch (err) {
@@ -59,13 +49,12 @@ export default function ContactForm() {
     } finally {
       setIsSubmitting(false);
     }
-
   };
 
   return (
     <section
       id="contact"
-      className="relative px-4 py-16 lg:py-24 bg-slate-950/80 scroll-mt-24"
+      className="relative px-4 py-16 lg:py-24 bg-[#0b1531] scroll-mt-24"
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10 space-y-4">
@@ -77,9 +66,23 @@ export default function ContactForm() {
             rapidement avec une estimation personnalisée et des pistes concrètes pour renforcer
             votre protection.
           </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              "Réponse sous 15 minutes ouvrées",
+              "Conseil personnalisé (sans engagement)",
+              "Assistance incident 24/7 incluse",
+            ].map((item) => (
+              <span
+                key={item}
+                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-blue-100"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <div className="bg-slate-900/80 border border-blue-500/30 rounded-3xl p-6 lg:p-10 shadow-xl shadow-blue-900/40 backdrop-blur-xl">
+        <div className="bg-[#0f1c3a] border border-blue-500/30 rounded-3xl p-6 lg:p-10 shadow-xl shadow-blue-900/40 backdrop-blur-xl">
           {hasSubmitted ? (
             <div className="text-center space-y-4">
               <h3 className="text-2xl font-semibold text-white">
@@ -203,11 +206,10 @@ export default function ContactForm() {
                 >
                   {isSubmitting ? 'Envoi en cours…' : 'Envoyer ma demande de tarif'}
                 </button>
-                <p className="text-xs text-blue-200/70">
-                  En envoyant ce formulaire, vous acceptez d&apos;être recontacté(e) par un expert
-                  pour échanger sur votre protection cyber. Aucune donnée ne sera partagée avec des
-                  tiers sans votre accord.
-                </p>
+                <div className="text-xs text-blue-200/80 space-y-1">
+                  <p>Appel découverte de 10 minutes pour estimer votre exposition et votre tarif.</p>
+                  <p>Vos données restent confidentielles et ne sont jamais revendues.</p>
+                </div>
               </div>
             </form>
           )}

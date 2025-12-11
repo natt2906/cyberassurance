@@ -2,6 +2,7 @@ import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleJsonLd from "../seo/ArticleJsonLd";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 
 export default function ArticleFormerEquipes() {
@@ -101,6 +102,7 @@ export default function ArticleFormerEquipes() {
 </p>
         </div>
       </main>
+      <RelatedArticles currentSlug="former-equipes-risque-cyber" />
       <BackToArticles />  {/* ← AUTOMATIQUE */}
 
     </div>

@@ -2,6 +2,7 @@ import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleJsonLd from "../seo/ArticleJsonLd";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 export default function ArticleEcommerce() {
   return (
@@ -100,6 +101,7 @@ export default function ArticleEcommerce() {
 </p>
         </div>
       </main>
+      <RelatedArticles currentSlug="ecommerce-vol-donnees" />
       <BackToArticles />  {/* ← AUTOMATIQUE */}
     </div>
   );

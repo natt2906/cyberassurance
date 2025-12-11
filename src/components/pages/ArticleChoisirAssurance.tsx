@@ -2,6 +2,7 @@ import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleJsonLd from "../seo/ArticleJsonLd";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 export default function ArticleChoisirAssurance() {
   return (
@@ -100,6 +101,7 @@ export default function ArticleChoisirAssurance() {
 </p>
         </div>
       </main>
+      <RelatedArticles currentSlug="comment-choisir-assurance-cyber" />
       <BackToArticles />  {/* ← AUTOMATIQUE */}
     </div>
   );

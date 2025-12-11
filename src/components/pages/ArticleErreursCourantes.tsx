@@ -2,6 +2,7 @@ import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleJsonLd from "../seo/ArticleJsonLd";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 export default function ArticleErreursCourantes() {
   return (
@@ -100,6 +101,7 @@ export default function ArticleErreursCourantes() {
 </p>
         </div>
       </main>
+      <RelatedArticles currentSlug="erreurs-courantes-cyber-petites-entreprises" />
       <BackToArticles />  {/* ← AUTOMATIQUE */}
     </div>
   );

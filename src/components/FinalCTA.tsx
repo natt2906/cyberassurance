@@ -97,14 +97,9 @@ export default function FinalCTA() {
               className="hover:text-white transition"
               aria-label="Instagram Astuce Cyber"
             >
-              <svg
-                width="22"
-                height="22"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm9 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h9zm-4.5 3A4.505 4.505 0 0 0 7 11.5C7 14.532 9.467 17 12.5 17S18 14.532 18 11.5 15.533 5 12.5 5zm0 2C14.43 7 16 8.57 16 10.5S14.43 14 12.5 14 9 12.43 9 10.5 10.57 7 12.5 7zm4.75-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z" />
-              </svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="w-10 h-10 fill-current">
+              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.25 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
+            </svg>
             </a>
 
             {/* TikTok */}
@@ -115,14 +110,9 @@ export default function FinalCTA() {
               className="hover:text-white transition"
               aria-label="TikTok Astuce Cyber"
             >
-              <svg
-                width="22"
-                height="22"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M16 8.041A5.958 5.958 0 0 1 19 9c.35 0 .687-.024 1.016-.07V4.938A4.938 4.938 0 0 1 15.062 0H10v14.062A3.938 3.938 0 1 1 6.062 10H2.938A7.062 7.062 0 1 0 10 17.062V5h3.062A3.937 3.937 0 0 0 16 8.041z" />
-              </svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="w-10 h-10 fill-current">
+              <path d="M15.5 3.1a4.6 4.6 0 0 0 .1 1.1c.3 1.5 1.4 2.6 2.8 2.9.4.1.7.1 1.1.1V9a6.5 6.5 0 0 1-3.9-1.3v6.4a5.76 5.76 0 1 1-5-5.7V10a3.76 3.76 0 1 0 2.7 3.6V3.1h2.3Z" />
+            </svg>
             </a>
           </div>
         </footer>

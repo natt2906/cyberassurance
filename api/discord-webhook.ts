@@ -16,7 +16,10 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const payload = req.body;
+    const payload =
+      typeof req.body === "string" && req.body.trim().length
+        ? JSON.parse(req.body)
+        : req.body || (await req.json?.());
 
     // Appel Discord côté serveur => aucun problème CORS
     const discordRes = await fetch(webhookUrl, {

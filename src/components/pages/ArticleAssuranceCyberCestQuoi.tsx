@@ -2,6 +2,7 @@ import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleJsonLd from "../seo/ArticleJsonLd";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 export default function ArticleAssuranceCyberCestQuoi() {
   return (
@@ -101,6 +102,7 @@ export default function ArticleAssuranceCyberCestQuoi() {
 </p>
         </div>
       </main>
+      <RelatedArticles currentSlug="assurance-cyber-cest-quoi" />
       <BackToArticles />  {/* ← AUTOMATIQUE */}
     </div>
   );

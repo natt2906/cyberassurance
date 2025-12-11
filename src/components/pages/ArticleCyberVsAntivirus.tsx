@@ -2,6 +2,7 @@ import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleJsonLd from "../seo/ArticleJsonLd";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 export default function ArticleCyberVsAntivirus() {
   return (
@@ -100,6 +101,7 @@ export default function ArticleCyberVsAntivirus() {
 </p>
         </div>
       </main>
+      <RelatedArticles currentSlug="assurance-cyber-vs-antivirus" />
       <BackToArticles />  {/* ← AUTOMATIQUE */}
     </div>
   );

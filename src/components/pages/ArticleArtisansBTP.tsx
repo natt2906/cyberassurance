@@ -2,6 +2,7 @@ import MainNavbar from "../layout/MainNavbar";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleJsonLd from "../seo/ArticleJsonLd";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 export default function ArticleArtisansBTP() {
   return (
@@ -100,7 +101,8 @@ export default function ArticleArtisansBTP() {
 </p>
         </div>
       </main>
-        <BackToArticles />  {/* ← AUTOMATIQUE */}
+        <RelatedArticles currentSlug="artisans-btp-assurance-cyber" />
+      <BackToArticles />  {/* ← AUTOMATIQUE */}
     </div>
   );
 }

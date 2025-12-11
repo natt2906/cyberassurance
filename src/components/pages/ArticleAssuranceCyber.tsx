@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import BackToArticles from "../ui/BackToAricles";
 import ArticleSeoMeta from "../seo/ArticleSeoMeta";
+import RelatedArticles from "../ui/RelatedArticles";
 
 export default function ArticleAssuranceCyber() {
   return (
@@ -243,6 +244,7 @@ export default function ArticleAssuranceCyber() {
           </div>
         </div>
       </main>
+      <RelatedArticles currentSlug="assurance-cyber-cest-quoi" />
       <BackToArticles />  {/* ← AUTOMATIQUE */}
     </div>
   );

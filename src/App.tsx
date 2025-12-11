@@ -2,6 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import PageViewTracker from "./analytics/PageViewTracker";
 import SiteJsonLd from "./components/seo/SiteJsonLd";
 import CookieBanner from "./components/ui/CookieBanner";
+import HashScroll from "./components/layout/HashScroll";
+import ScrollToTop from "./components/layout/ScrollToTop";
+import FloatingContact from "./components/ui/FloatingContact";
 // Page liste des articles
 import ArticlesIndex from "./components/pages/ArticlesIndex";
 import HomePage from "./components/pages/HomePage";
@@ -34,6 +37,9 @@ function App() {
       <PageViewTracker />
       <SiteJsonLd />
       <CookieBanner />
+      <HashScroll />
+      <ScrollToTop />
+      <FloatingContact />
       <Routes>
         {/* Landing */}
         <Route path="/" element={<HomePage />} />

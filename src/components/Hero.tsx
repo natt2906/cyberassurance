@@ -93,7 +93,7 @@ export default function Hero() {
           {/* ILLUSTRATION / IMAGE */}
           <div className="relative">
             <div className="relative z-10 bg-gradient-to-br from-blue-500/20 to-violet-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-4 lg:p-8 flex items-center justify-center">
-              <img
+              <img loading="lazy"
                 src="/og-image.png"  // <= fichier placé dans public/
                 alt="Illustration cyber sécurité et assurance pour PME"
                 className="rounded-2xl shadow-2xl max-h-[420px] w-auto object-cover"

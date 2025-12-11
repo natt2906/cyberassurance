@@ -91,12 +91,12 @@ export default function MainNavbar() {
               Nous contacter
             </button>
           ) : (
-            <a
-              href="/#contact"
+            <Link
+              to="/#contact"
               className="px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/50 text-blue-50 hover:bg-blue-500/30 transition-all"
             >
               Nous contacter
-            </a>
+            </Link>
           )}
 
           {/* FAQ */}
@@ -109,12 +109,12 @@ export default function MainNavbar() {
               FAQ
             </button>
           ) : (
-            <a
-              href="/#faq"
+            <Link
+              to="/#faq"
               className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-blue-400/60 hover:text-white transition-all"
             >
               FAQ
-            </a>
+            </Link>
           )}
         </nav>
       </div>
