@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { sendLead } from '../utils/sendLead';
+import { trackAdsConversion } from '../analytics/gtag';
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,6 +49,7 @@ export default function ContactForm() {
 
     try {
       await sendLead(payload);
+      trackAdsConversion();
       setHasSubmitted(true);
       form.reset();
     } catch (err) {

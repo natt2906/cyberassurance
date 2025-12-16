@@ -1,5 +1,6 @@
 // src/analytics/gtag.ts
 const GA_MEASUREMENT_ID = "G-CDM3EPYZNQ"; // ton ID
+const ADS_CONVERSION_ID = "AW-11278008764/Rjq1CLaa8doYELyD44Eq";
 
 declare global {
   interface Window {
@@ -20,4 +21,9 @@ export const trackEvent = (
 ) => {
   if (!window.gtag) return;
   window.gtag("event", eventName, params);
+};
+
+export const trackAdsConversion = () => {
+  if (!window.gtag) return;
+  window.gtag("event", "conversion", { send_to: ADS_CONVERSION_ID });
 };

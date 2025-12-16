@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import { sendLead } from "../../utils/sendLead";
+import { trackAdsConversion } from "../../analytics/gtag";
 
 type ConsentPrefs = {
   name: string;
@@ -65,6 +66,7 @@ export default function FloatingContact() {
 
     try {
       await sendLead(payload);
+      trackAdsConversion();
       setHasSubmitted(true);
       setFormValues(initialForm);
     } catch (err) {
