@@ -42,6 +42,15 @@ export default function Hero() {
               et les priorités d’action avant qu’un incident ne bloque votre activité.
             </p>
 
+            <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-blue-100/90">
+              <p className="text-sm font-semibold text-white">Une cyberattaque peut :</p>
+              <ul className="mt-2 space-y-1 text-sm">
+                <li>• Paralyser votre activité plusieurs jours</li>
+                <li>• Coûter des dizaines de milliers d&apos;euros</li>
+                <li>• Compromettre vos données clients</li>
+              </ul>
+            </div>
+
 
             <div className="flex flex-col sm:flex-row gap-4 w-full">
               <button

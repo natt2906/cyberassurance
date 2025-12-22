@@ -36,14 +36,15 @@ export const trackAdsConversion = () => {
 type LeadSubmitParams = {
   company_size?: string;
   sector?: string;
+  wants_advice?: boolean;
 };
 
-export const trackLeadSubmit = ({ company_size, sector }: LeadSubmitParams) => {
+export const trackLeadSubmit = ({ company_size, sector, wants_advice }: LeadSubmitParams) => {
   if (typeof window === "undefined") return;
-  const payload = { event: "lead_submit", company_size, sector };
+  const payload = { event: "lead_submit", company_size, sector, wants_advice };
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push(payload);
   if (!window.gtag) return;
-  window.gtag("event", "generate_lead", { company_size, sector });
-  window.gtag("event", "lead_submit", { company_size, sector });
+  window.gtag("event", "generate_lead", { company_size, sector, wants_advice });
+  window.gtag("event", "lead_submit", { company_size, sector, wants_advice });
 };
