@@ -1,5 +1,4 @@
 import { X, Check } from 'lucide-react';
-import { trackEvent } from "../analytics/gtag";
 
 export default function Comparison() {
   const withoutInsurance = [
@@ -17,23 +16,6 @@ export default function Comparison() {
     'Couverture financière claire',
     "Continuité d'activité assurée"
   ];
-
-  const scrollToContact = () => {
-    const el = document.getElementById("contact");
-    if (!el) return;
-    const offset = 80;
-    const y = el.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
-  const handleClickProteger = () => {
-    trackEvent("cta_click", {
-      location: "comparison",
-      action: "proteger_entreprise",
-      label: "Protéger mon entreprise maintenant",
-    });
-    scrollToContact();
-  };
 
   return (
     <section className="relative px-4 py-20 lg:py-32">
@@ -104,23 +86,9 @@ export default function Comparison() {
         </div>
 
         <div className="flex justify-center">
-          <button onClick={handleClickProteger}
-            
-            className="
-              w-full sm:w-auto
-              inline-flex items-center justify-center text-center
-              bg-gradient-to-r from-blue-500 to-violet-500
-              text-white px-6 py-4
-              rounded-full
-              text-base sm:text-lg font-semibold
-              shadow-xl shadow-blue-500/40 hover:shadow-blue-500/60
-              transition-all duration-300
-              hover:scale-105
-              whitespace-normal
-            "
-          >
-            Protéger mon entreprise maintenant
-          </button>
+          <p className="text-blue-200 text-sm">
+            Recevez un audit gratuit pour savoir où concentrer vos efforts.
+          </p>
         </div>
       </div>
     </section>

@@ -1,5 +1,4 @@
 import { Shield, Wrench, Mail, Search, FileText } from 'lucide-react';
-import { trackEvent } from "../analytics/gtag";
 
 export default function Solution() {
   const benefits = [
@@ -30,23 +29,6 @@ export default function Solution() {
     }
   ];
 
-    const scrollToContact = () => {
-    const el = document.getElementById("contact");
-    if (!el) return;
-    const offset = 80;
-    const y = el.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
-  const handleClickGaranties = () => {
-    trackEvent("cta_click", {
-      location: "solution",
-      action: "voir_garanties",
-      label: "Voir nos garanties",
-    });
-    scrollToContact();
-  };
-
   return (
     <section className="relative px-4 py-20 lg:py-32 bg-gradient-to-b from-transparent via-blue-900/30 to-transparent">
       <div className="max-w-7xl mx-auto">
@@ -75,12 +57,9 @@ export default function Solution() {
         </div>
 
         <div className="text-center">
-          <button onClick={handleClickGaranties}
-            
-            className="bg-gradient-to-r from-blue-500 to-violet-500 text-white px-8 py-3 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
-            Voir nos garanties
-            <span className="text-2xl">→</span>
-          </button>
+          <p className="text-blue-200 text-sm">
+            Audit express et recommandations prioritaires selon votre secteur.
+          </p>
         </div>
       </div>
     </section>

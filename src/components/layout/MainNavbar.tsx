@@ -89,13 +89,13 @@ export default function MainNavbar() {
             <button
               type="button"
               className="px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/50 text-blue-50 hover:bg-blue-500/30 transition-all"
-              onClick={() => scrollToId("contact")}
+              onClick={() => scrollToId("audit")}
             >
               Nous contacter
             </button>
           ) : (
             <Link
-              to="/#contact"
+              to="/#audit"
               className="px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/50 text-blue-50 hover:bg-blue-500/30 transition-all"
             >
               Nous contacter

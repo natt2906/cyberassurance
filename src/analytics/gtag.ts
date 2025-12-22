@@ -5,6 +5,7 @@ const ADS_CONVERSION_ID = "AW-11278008764/Rjq1CLaa8doYELyD44Eq";
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
+    dataLayer?: Record<string, unknown>[];
   }
 }
 
@@ -25,5 +26,24 @@ export const trackEvent = (
 
 export const trackAdsConversion = () => {
   if (!window.gtag) return;
-  window.gtag("event", "conversion", { send_to: ADS_CONVERSION_ID });
+  window.gtag("event", "conversion", {
+    send_to: ADS_CONVERSION_ID,
+    value: 1,
+    currency: "EUR",
+  });
+};
+
+type LeadSubmitParams = {
+  company_size?: string;
+  sector?: string;
+};
+
+export const trackLeadSubmit = ({ company_size, sector }: LeadSubmitParams) => {
+  if (typeof window === "undefined") return;
+  const payload = { event: "lead_submit", company_size, sector };
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(payload);
+  if (!window.gtag) return;
+  window.gtag("event", "generate_lead", { company_size, sector });
+  window.gtag("event", "lead_submit", { company_size, sector });
 };

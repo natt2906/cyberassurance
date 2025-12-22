@@ -1,29 +1,19 @@
-import { Shield, TrendingUp, Users } from "lucide-react";
 import { trackEvent } from "../analytics/gtag";
 
 export default function Hero() {
   const scrollToContact = () => {
-    const el = document.getElementById("contact");
+    const el = document.getElementById("audit");
     if (!el) return;
     const offset = 80;
     const y = el.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
-  const handleClickTarif = () => {
+  const handleClickAudit = () => {
     trackEvent("cta_click", {
       location: "hero",
-      action: "obtenir_tarif",
-      label: "Obtenir un tarif en 30 secondes",
-    });
-    scrollToContact();
-  };
-
-  const handleClickExpert = () => {
-    trackEvent("cta_click", {
-      location: "hero",
-      action: "parler_expert",
-      label: "Parler à un expert cyber",
+      action: "obtenir_audit",
+      label: "Obtenir mon audit cyber gratuit",
     });
     scrollToContact();
   };
@@ -40,53 +30,41 @@ export default function Hero() {
           {/* TEXTE */}
           <div className="space-y-8">
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-              Votre entreprise pourrait{" "}
+              Une cyberattaque peut{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
-                s&apos;arrêter demain.
+                tout arrêter.
               </span>{" "}
-              Protégez-la maintenant.
+              Protégez votre activité.
             </h1>
 
             <p className="text-xl lg:text-2xl text-blue-100">
-              L&apos;assurance cyber qui couvre vos pertes financières, votre arrêt
-              d&apos;activité et vos données.
+              Obtenez un audit cyber gratuit pour PME afin d’identifier vos risques
+              et les priorités d’action avant qu’un incident ne bloque votre activité.
             </p>
+
 
             <div className="flex flex-col sm:flex-row gap-4 w-full">
               <button
-                onClick={handleClickTarif}
+                onClick={handleClickAudit}
                 className="w-full bg-gradient-to-r from-blue-500/80 to-violet-500/80 text-white px-10 py-4 rounded-full text-[20px] font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
-                Obtenir un tarif
-              </button>
-
-              <button
-                onClick={handleClickExpert}
-                className="w-full bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-full text-[20px] font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 inline-flex items-center justify-center"
-              >
-                Parler à un expert cyber
+                Obtenir mon audit cyber gratuit
               </button>
             </div>
 
-            <div className="flex flex-wrap gap-8 pt-8">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-blue-500/20 rounded-lg">
-                  <Users className="w-6 h-6 text-blue-300" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-white">+1200</div>
-                  <div className="text-sm text-blue-200">entreprises protégées</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-violet-500/20 rounded-lg">
-                  <TrendingUp className="w-6 h-6 text-violet-300" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-white">98%</div>
-                  <div className="text-sm text-blue-200">satisfaction client</div>
-                </div>
-              </div>
+            <div className="flex flex-wrap gap-3 pt-4">
+              {[
+                "Audit sans engagement",
+                "Réponse sous 24h ouvrées",
+                "Données confidentielles",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-blue-100"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
 

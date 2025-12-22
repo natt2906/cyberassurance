@@ -1,30 +1,21 @@
-import { Zap, Phone } from "lucide-react";
+import { Zap } from "lucide-react";
 import { trackEvent } from "../analytics/gtag";
 
 export default function FinalCTA() {
   // Scroll propre vers le formulaire
   const scrollToContact = () => {
-    const el = document.getElementById("contact");
+    const el = document.getElementById("audit");
     if (!el) return;
     const offset = 80; // Décalage pour la navbar
     const y = el.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
-  const handleClickDevis = () => {
+  const handleClickAudit = () => {
     trackEvent("cta_click", {
       location: "final_cta",
-      action: "obtenir_devis",
-      label: "Obtenir un devis rapide",
-    });
-    scrollToContact();
-  };
-
-  const handleClickAppel = () => {
-    trackEvent("cta_click", {
-      location: "final_cta",
-      action: "reserver_appel",
-      label: "Réserver un appel gratuit",
+      action: "obtenir_audit",
+      label: "Obtenir mon audit cyber gratuit",
     });
     scrollToContact();
   };
@@ -38,31 +29,23 @@ export default function FinalCTA() {
           <div className="relative bg-gradient-to-br from-blue-500/20 to-violet-500/20 backdrop-blur-xl border-2 border-blue-400/50 rounded-3xl p-12 lg:p-16">
             <div className="text-center space-y-8">
               <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Un piratage peut tout arrêter.{" "}
+                Obtenez votre{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
-                  Votre protection, non.
+                  audit cyber gratuit.
                 </span>
               </h2>
 
               <p className="text-2xl text-blue-100">
-                Obtenez votre tarif en moins d&apos;une minute.
+                Un diagnostic clair, sans engagement.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={handleClickDevis}
+                  onClick={handleClickAudit}
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105"
                 >
                   <Zap className="w-4 h-4" />
-                  Obtenir un devis rapide
-                </button>
-
-                <button
-                  onClick={handleClickAppel}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-white/10 text-sm font-semibold text-blue-100 border border-blue-200/30 hover:bg-white/20 transition-all duration-300"
-                >
-                  <Phone className="w-4 h-4" />
-                  Réserver un appel gratuit
+                  Obtenir mon audit cyber gratuit
                 </button>
               </div>
 
