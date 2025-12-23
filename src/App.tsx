@@ -9,6 +9,8 @@ import GoogleAdsTag from "./components/seo/GoogleAdsTag";
 // Page liste des articles
 import ArticlesIndex from "./components/pages/ArticlesIndex";
 import HomePage from "./components/pages/HomePage";
+import AuditCyberPage from "./components/pages/AuditCyberPage";
+import AssistancePage from "./components/pages/AssistancePage";
 
 // 20 pages articles
 import ArticleAssuranceCyberCestQuoi from "./components/pages/ArticleAssuranceCyberCestQuoi";
@@ -45,6 +47,8 @@ function App() {
       <Routes>
         {/* Landing */}
         <Route path="/" element={<HomePage />} />
+        <Route path="/audit-cyber" element={<AuditCyberPage />} />
+        <Route path="/assistance" element={<AssistancePage />} />
 
         {/* Page liste articles */}
         <Route path="/articles" element={<ArticlesIndex />} />

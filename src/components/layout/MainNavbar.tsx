@@ -6,6 +6,14 @@ export default function MainNavbar() {
   const [openArticles, setOpenArticles] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isAudit = location.pathname === "/audit-cyber";
+  const isAssistance = location.pathname === "/assistance";
+  const activeHash = location.hash;
+
+  const navBaseClass =
+    "px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-blue-400/60 hover:text-white transition-all";
+  const navActiveClass = "border-blue-400/70 text-white bg-white/10";
+  const navInactiveClass = "text-blue-100";
 
   const scrollToId = (id: string) => {
     const el = document.getElementById(id);
@@ -31,9 +39,23 @@ export default function MainNavbar() {
           {/* Accueil */}
           <Link
             to="/"
-            className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-blue-400/60 hover:text-white transition-all"
+            className={`${navBaseClass} ${isHome ? navActiveClass : navInactiveClass}`}
           >
             Accueil
+          </Link>
+
+          <Link
+            to="/audit-cyber"
+            className={`${navBaseClass} ${isAudit ? navActiveClass : navInactiveClass}`}
+          >
+            Audit gratuit
+          </Link>
+
+          <Link
+            to="/assistance"
+            className={`${navBaseClass} ${isAssistance ? navActiveClass : navInactiveClass}`}
+          >
+            Assistance
           </Link>
 
           {/* Nos articles : ouverture au clic + panel scrollable */}
@@ -88,7 +110,9 @@ export default function MainNavbar() {
           {isHome ? (
             <button
               type="button"
-              className="px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/50 text-blue-50 hover:bg-blue-500/30 transition-all"
+              className={`${navBaseClass} ${
+                activeHash === "#audit" ? navActiveClass : navInactiveClass
+              }`}
               onClick={() => scrollToId("audit")}
             >
               Nous contacter
@@ -96,7 +120,7 @@ export default function MainNavbar() {
           ) : (
             <Link
               to="/#audit"
-              className="px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/50 text-blue-50 hover:bg-blue-500/30 transition-all"
+              className={navBaseClass}
             >
               Nous contacter
             </Link>
@@ -106,7 +130,9 @@ export default function MainNavbar() {
           {isHome ? (
             <button
               type="button"
-              className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-blue-400/60 hover:text-white transition-all"
+              className={`${navBaseClass} ${
+                activeHash === "#faq" ? navActiveClass : navInactiveClass
+              }`}
               onClick={() => scrollToId("faq")}
             >
               FAQ
@@ -114,7 +140,7 @@ export default function MainNavbar() {
           ) : (
             <Link
               to="/#faq"
-              className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-blue-400/60 hover:text-white transition-all"
+              className={navBaseClass}
             >
               FAQ
             </Link>

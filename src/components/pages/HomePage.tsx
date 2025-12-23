@@ -40,7 +40,7 @@ export default function HomePage() {
         <Testimonials />
         <Comparison />
         <HomeArticlesHighlights />
-        <ContactForm />
+        <ContactForm sectionId="audit" />
         <SocialSection />  
         <FAQ />
         <FinalCTA />

@@ -2,7 +2,17 @@ import { FormEvent, useState } from 'react';
 import { sendLead } from '../utils/sendLead';
 import { trackAdsConversion, trackLeadSubmit } from '../analytics/gtag';
 
-export default function ContactForm() {
+type ContactFormProps = {
+  trackingSource?: string;
+  onSubmitted?: () => void;
+  sectionId?: string;
+};
+
+export default function ContactForm({
+  trackingSource = "contact_default",
+  onSubmitted,
+  sectionId = "contact",
+}: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -55,10 +65,16 @@ export default function ContactForm() {
 
     try {
       await sendLead(payload);
-      trackLeadSubmit({ company_size: companySize, sector, wants_advice: wantsAdvice });
+      trackLeadSubmit({
+        company_size: companySize,
+        sector,
+        wants_advice: wantsAdvice,
+        source: trackingSource,
+      });
       trackAdsConversion();
       setHasSubmitted(true);
       form.reset();
+      onSubmitted?.();
     } catch (err) {
       console.error(err);
       setError(
@@ -71,7 +87,7 @@ export default function ContactForm() {
 
   return (
     <section
-      id="audit"
+      id={sectionId}
       className="relative px-4 py-16 lg:py-24 bg-[#0b1531] scroll-mt-24"
     >
       <div className="max-w-4xl mx-auto">

@@ -10,6 +10,14 @@
     <loc>https://assurance-cyber-securite.fr/articles</loc>
     <priority>0.90</priority>
   </url>
+  <url>
+    <loc>https://assurance-cyber-securite.fr/audit-cyber</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://assurance-cyber-securite.fr/assistance</loc>
+    <priority>0.80</priority>
+  </url>
 
   <!-- 20 ARTICLES -->
   <url><loc>https://assurance-cyber-securite.fr/articles/assurance-cyber-cest-quoi</loc></url>
