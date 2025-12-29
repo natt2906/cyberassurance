@@ -4,6 +4,7 @@ import { articlesMeta } from "../../data/articlesMeta";
 
 export default function MainNavbar() {
   const [openArticles, setOpenArticles] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
   const isAudit = location.pathname === "/audit-cyber";
@@ -35,7 +36,7 @@ export default function MainNavbar() {
         </Link>
 
         {/* Navigation principale */}
-        <nav className="flex items-center gap-3 sm:gap-5 text-xs sm:text-sm text-blue-100">
+        <nav className="hidden md:flex items-center gap-3 sm:gap-5 text-xs sm:text-sm text-blue-100">
           {/* Accueil */}
           <Link
             to="/"
@@ -146,7 +147,96 @@ export default function MainNavbar() {
             </Link>
           )}
         </nav>
+
+        {/* Burger menu (mobile) */}
+        <button
+          type="button"
+          className="md:hidden inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 py-2 text-white hover:border-blue-400/60 transition-all"
+          aria-label={openMenu ? "Fermer le menu" : "Ouvrir le menu"}
+          onClick={() => setOpenMenu((prev) => !prev)}
+        >
+          <span className="text-lg">{openMenu ? "✕" : "☰"}</span>
+        </button>
       </div>
+
+      {openMenu && (
+        <div className="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur">
+          <div className="px-4 py-4 flex flex-col gap-3 text-sm text-blue-100">
+            <Link
+              to="/"
+              onClick={() => setOpenMenu(false)}
+              className={`${navBaseClass} ${isHome ? navActiveClass : navInactiveClass}`}
+            >
+              Accueil
+            </Link>
+            <Link
+              to="/audit-cyber"
+              onClick={() => setOpenMenu(false)}
+              className={`${navBaseClass} ${isAudit ? navActiveClass : navInactiveClass}`}
+            >
+              Audit gratuit
+            </Link>
+            <Link
+              to="/assistance"
+              onClick={() => setOpenMenu(false)}
+              className={`${navBaseClass} ${isAssistance ? navActiveClass : navInactiveClass}`}
+            >
+              Assistance
+            </Link>
+            <Link
+              to="/articles"
+              onClick={() => setOpenMenu(false)}
+              className={navBaseClass}
+            >
+              Tous les articles
+            </Link>
+            {isHome ? (
+              <button
+                type="button"
+                onClick={() => {
+                  scrollToId("audit");
+                  setOpenMenu(false);
+                }}
+                className={`${navBaseClass} ${
+                  activeHash === "#audit" ? navActiveClass : navInactiveClass
+                }`}
+              >
+                Nous contacter
+              </button>
+            ) : (
+              <Link
+                to="/#audit"
+                onClick={() => setOpenMenu(false)}
+                className={navBaseClass}
+              >
+                Nous contacter
+              </Link>
+            )}
+            {isHome ? (
+              <button
+                type="button"
+                onClick={() => {
+                  scrollToId("faq");
+                  setOpenMenu(false);
+                }}
+                className={`${navBaseClass} ${
+                  activeHash === "#faq" ? navActiveClass : navInactiveClass
+                }`}
+              >
+                FAQ
+              </button>
+            ) : (
+              <Link
+                to="/#faq"
+                onClick={() => setOpenMenu(false)}
+                className={navBaseClass}
+              >
+                FAQ
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
     </header>
   );
 }
