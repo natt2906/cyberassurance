@@ -1,14 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import MainNavbar from "../layout/MainNavbar";
 import ContactForm from "../ContactForm";
 import SeoHead from "../seo/SeoHead";
 import { baseSiteUrl } from "../../data/articlesSeo";
-import { trackEvent } from "../../analytics/gtag";
+import { pushDataLayerEvent, trackEvent } from "../../analytics/gtag";
+import BottomSheet from "../ui/BottomSheet";
+import StickyBar from "../ui/StickyBar";
+import MultiStepForm from "../MultiStepForm";
 
 export default function AuditCyberPage() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   useEffect(() => {
     trackEvent("view_audit_page");
   }, []);
+
+  const openDrawer = () => {
+    setDrawerOpen(true);
+    pushDataLayerEvent("lead_form_open", { source: "sticky_bar", page: "audit" });
+  };
+
+  const closeDrawer = () => setDrawerOpen(false);
 
   const scrollToContact = () => {
     const el = document.getElementById("contact");
@@ -20,6 +32,10 @@ export default function AuditCyberPage() {
 
   const handleCtaClick = () => {
     trackEvent("cta_audit_click", { location: "hero" });
+    if (window.innerWidth < 768) {
+      openDrawer();
+      return;
+    }
     scrollToContact();
   };
 
@@ -59,7 +75,7 @@ export default function AuditCyberPage() {
   const steps = [
     {
       title: "Répondez au formulaire",
-      description: "4 questions pour comprendre votre contexte.",
+      description: "2 questions pour comprendre votre contexte.",
     },
     {
       title: "Analyse rapide",
@@ -81,7 +97,7 @@ export default function AuditCyberPage() {
       />
       <MainNavbar />
 
-      <main className="pt-24">
+      <main className="pt-24 pb-20 md:pb-0">
         <section className="relative px-4 py-16 lg:py-24">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-violet-600/10 to-transparent"></div>
           <div className="relative max-w-5xl mx-auto text-center">
@@ -170,7 +186,9 @@ export default function AuditCyberPage() {
           </div>
         </section>
 
-        <ContactForm trackingSource="audit_page" sectionId="contact" />
+        <div className="hidden md:block">
+          <ContactForm trackingSource="audit_page" sectionId="contact" />
+        </div>
 
         <section className="px-4 py-12">
           <div className="max-w-4xl mx-auto rounded-3xl border border-blue-400/30 bg-[#0f1c3a] px-6 py-8 text-center">
@@ -181,6 +199,15 @@ export default function AuditCyberPage() {
           </div>
         </section>
       </main>
+      <StickyBar label="Obtenir mon audit gratuit (2 min)" onClick={openDrawer} />
+      <BottomSheet open={drawerOpen} onClose={closeDrawer} title="Audit cyber gratuit">
+        <MultiStepForm
+          trackingSource="audit_drawer"
+          onSubmitted={closeDrawer}
+          autoFocus={drawerOpen}
+          variant="drawer"
+        />
+      </BottomSheet>
     </div>
   );
 }

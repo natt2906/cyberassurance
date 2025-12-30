@@ -1,6 +1,11 @@
 import { trackEvent } from "../analytics/gtag";
+import ContactForm from "./ContactForm";
 
-export default function Hero() {
+type HeroProps = {
+  onOpenDrawer?: () => void;
+};
+
+export default function Hero({ onOpenDrawer }: HeroProps) {
   const scrollToContact = () => {
     const el = document.getElementById("audit");
     if (!el) return;
@@ -15,6 +20,10 @@ export default function Hero() {
       action: "obtenir_audit",
       label: "Obtenir mon audit cyber gratuit",
     });
+    if (window.innerWidth < 768 && onOpenDrawer) {
+      onOpenDrawer();
+      return;
+    }
     scrollToContact();
   };
 
@@ -26,9 +35,9 @@ export default function Hero() {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* TEXTE */}
-          <div className="space-y-8">
+          <div className="order-2 lg:order-1 space-y-8">
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
               Une cyberattaque peut{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
@@ -77,18 +86,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ILLUSTRATION / IMAGE */}
-          <div className="relative">
-            <div className="relative z-10 bg-gradient-to-br from-blue-500/20 to-violet-500/20 backdrop-blur-xl border border-white/20 rounded-3xl p-4 lg:p-8 flex items-center justify-center">
-              <img
-                loading="lazy"
-                width="1200"
-                height="630"
-                src="/og-image.png"  // <= fichier placé dans public/
-                alt="Illustration cyber sécurité et assurance pour PME"
-                className="rounded-2xl shadow-2xl max-h-[420px] w-auto object-cover"
-              />
-            </div>
+          <div className="order-1 lg:order-2 relative hidden md:block">
+            <ContactForm layout="embedded" sectionId="audit" stickyCard />
           </div>
         </div>
       </div>

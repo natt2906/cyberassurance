@@ -1,7 +1,11 @@
 import { Zap } from "lucide-react";
 import { trackEvent } from "../analytics/gtag";
 
-export default function FinalCTA() {
+type FinalCTAProps = {
+  onOpenDrawer?: () => void;
+};
+
+export default function FinalCTA({ onOpenDrawer }: FinalCTAProps) {
   // Scroll propre vers le formulaire
   const scrollToContact = () => {
     const el = document.getElementById("audit");
@@ -17,6 +21,10 @@ export default function FinalCTA() {
       action: "obtenir_audit",
       label: "Obtenir mon audit cyber gratuit",
     });
+    if (window.innerWidth < 768 && onOpenDrawer) {
+      onOpenDrawer();
+      return;
+    }
     scrollToContact();
   };
 

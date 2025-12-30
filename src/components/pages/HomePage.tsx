@@ -1,3 +1,4 @@
+import { useState } from "react";
 import MainNavbar from "../../components/layout/MainNavbar";
 
 // Tes sections
@@ -9,16 +10,28 @@ import Testimonials from "../../components/Testimonials";
 import Comparison from "../../components/Comparison";
 import HomeArticlesHighlights from "../../components/HomeArticlesHighlights";
 import FAQ from "../../components/FAQ";
-import ContactForm from "../../components/ContactForm";
 import FinalCTA from "../../components/FinalCTA";
 import SocialSection from "../../components/SocialSection";
 import SeoHead from "../../components/seo/SeoHead";
 import { baseSiteUrl } from "../../data/articlesSeo";
 import HomeServiceJsonLd from "../../components/seo/HomeServiceJsonLd";
+import BottomSheet from "../../components/ui/BottomSheet";
+import StickyBar from "../../components/ui/StickyBar";
+import MultiStepForm from "../../components/MultiStepForm";
+import { pushDataLayerEvent } from "../../analytics/gtag";
 
 
 
 export default function HomePage() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const openDrawer = () => {
+    setDrawerOpen(true);
+    pushDataLayerEvent("lead_form_open", { source: "sticky_bar", page: "home" });
+  };
+
+  const closeDrawer = () => setDrawerOpen(false);
+
   return (
     <div className="min-h-screen bg-[#0b1531]">
       <SeoHead
@@ -32,19 +45,27 @@ export default function HomePage() {
       <MainNavbar />
 
       {/* Contenu */}
-      <main className="pt-20">
-        <Hero />
+      <main className="pt-20 pb-20 md:pb-0">
+        <Hero onOpenDrawer={openDrawer} />
         <Problem />
         <Solution />
         <HowItWorks />
         <Testimonials />
         <Comparison />
         <HomeArticlesHighlights />
-        <ContactForm sectionId="audit" />
         <SocialSection />  
         <FAQ />
-        <FinalCTA />
+        <FinalCTA onOpenDrawer={openDrawer} />
       </main>
+      <StickyBar label="Obtenir mon audit gratuit (2 min)" onClick={openDrawer} />
+      <BottomSheet open={drawerOpen} onClose={closeDrawer} title="Audit cyber gratuit">
+        <MultiStepForm
+          trackingSource="home_drawer"
+          onSubmitted={closeDrawer}
+          autoFocus={drawerOpen}
+          variant="drawer"
+        />
+      </BottomSheet>
     </div>
   );
 }

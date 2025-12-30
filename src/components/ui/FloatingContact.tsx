@@ -92,7 +92,7 @@ export default function FloatingContact() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-50 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-transform hover:scale-105"
+        className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-50 hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-transform hover:scale-105"
       >
         🛡️ Audit cyber gratuit
       </button>

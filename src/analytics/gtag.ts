@@ -49,3 +49,9 @@ export const trackLeadSubmit = ({ company_size, sector, wants_advice, source }: 
   window.gtag("event", "generate_lead", { company_size, sector, wants_advice, source });
   window.gtag("event", "lead_submit", { company_size, sector, wants_advice, source });
 };
+
+export const pushDataLayerEvent = (event: string, params?: Record<string, unknown>) => {
+  if (typeof window === "undefined") return;
+  if (!window.dataLayer) return;
+  window.dataLayer.push({ event, ...(params ?? {}) });
+};
