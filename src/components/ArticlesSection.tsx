@@ -12,8 +12,8 @@ export default function ArticlesSection() {
             Articles & conseils sur l’assurance cyber
           </h2>
           <p className="text-blue-200 mt-3 max-w-2xl">
-            Des contenus simples pour comprendre les risques, les coûts et les solutions
-            de protection pour les TPE, PME, artisans et indépendants.
+            Des contenus simples pour comprendre garanties, sinistres, coûts d’un arrêt
+            d’activité et critères de souscription.
           </p>
         </div>
 
@@ -30,9 +30,9 @@ export default function ArticlesSection() {
               Assurance cyber : c’est quoi ? Explication simple pour PME & artisans
             </h3>
             <p className="text-sm text-blue-200/90 mb-4">
-              Une cyberattaque peut bloquer votre activité du jour au lendemain.
-              Dans cet article, on explique clairement ce que couvre une assurance cyber,
-              pour qui c’est utile et combien ça coûte.
+              Un sinistre peut bloquer votre activité du jour au lendemain.
+              Dans cet article, on explique ce que couvre une assurance cyber, les
+              garanties clés et les limites.
             </p>
             <span className="inline-flex items-center text-sm font-semibold text-blue-300 group-hover:text-blue-200">
               Lire l’article
@@ -46,11 +46,11 @@ export default function ArticlesSection() {
           <div className="bg-white/5 border border-dashed border-white/15 rounded-2xl p-6 flex flex-col justify-center">
             <p className="text-sm text-blue-200/80 mb-2">Bientôt disponible</p>
             <h3 className="text-xl font-semibold text-white mb-3">
-              Combien coûte réellement une cyberattaque pour une PME ?
+              Combien coûte réellement un sinistre cyber pour une PME ?
             </h3>
             <p className="text-sm text-blue-200/80">
-              Un prochain article analysera le coût global d’un incident cyber :
-              pertes d’exploitation, intervention d’urgence, image de marque…
+              Un prochain article analysera les coûts : pertes d’exploitation,
+              gestion de crise, responsabilité et image de marque.
             </p>
           </div>
         </div>

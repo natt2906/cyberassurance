@@ -4,6 +4,13 @@ import { articlesMeta } from "../../data/articlesMeta";
 import SeoHead from "../seo/SeoHead";
 import { baseSiteUrl } from "../../data/articlesSeo";
 
+const imageBySlug: Record<string, string> = {
+  "extorsion-cyber-activite-bloquee": "ransomware-que-faire",
+  "fraude-email-usurpation": "reconnaitre-mail-phishing",
+  "continuité-activite-restauration": "sauvegardes-strategie-pme",
+  "assurance-cyber-vs-prevention": "assurance-cyber-vs-antivirus",
+};
+
 export default function ArticlesIndex() {
   return (
     <div className="min-h-screen bg-[#020617] text-white">
@@ -12,7 +19,7 @@ export default function ArticlesIndex() {
       <main className="px-4 pt-24 pb-16">
         <SeoHead
           title="Articles & conseils sur l’assurance cyber | Assurance Cyber Sécurité"
-          description="Guides et conseils pour TPE/PME : assurance cyber, ransomware, phishing, sauvegardes, RGPD, messagerie et choix de garantie."
+          description="Guides pour TPE/PME/ETI : garanties, franchises, sinistres, pertes d’exploitation, responsabilité civile et RGPD."
           canonical={`${baseSiteUrl}/articles`}
           ogImage={`${baseSiteUrl}/og-image.png`}
         />
@@ -24,9 +31,9 @@ export default function ArticlesIndex() {
             Articles & conseils sur l’assurance cyber
           </h1>
           <p className="text-blue-200 mb-10 max-w-2xl">
-            Une sélection d’articles pédagogiques pour comprendre les risques
-            cyber, les coûts d’une attaque et les solutions pour protéger votre
-            entreprise.
+            Une sélection d’articles pédagogiques pour comprendre les garanties,
+            le coût d’un sinistre et les leviers d’assurance pour protéger votre
+            activité.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -38,7 +45,7 @@ export default function ArticlesIndex() {
               >
                 <div className="h-40 w-full overflow-hidden">
                   <img loading="lazy"
-                    src={`/articles/${art.slug}.png`}
+                    src={`/articles/${imageBySlug[art.slug] ?? art.slug}.png`}
                     alt={art.title}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" style={{ clipPath: "inset(2%)" }}
                   />

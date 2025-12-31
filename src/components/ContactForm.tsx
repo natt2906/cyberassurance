@@ -35,7 +35,7 @@ export default function ContactForm({
                 : "text-3xl lg:text-4xl font-bold text-white"
             }
           >
-            Recevez votre audit cyber gratuit
+            Faites votre demande de couverture cyber
           </h2>
           <p
             className={

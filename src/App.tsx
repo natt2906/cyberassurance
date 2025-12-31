@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import PageViewTracker from "./analytics/PageViewTracker";
 import SiteJsonLd from "./components/seo/SiteJsonLd";
 import CookieBanner from "./components/ui/CookieBanner";
@@ -53,6 +53,24 @@ function App() {
         {/* Page liste articles */}
         <Route path="/articles" element={<ArticlesIndex />} />
 
+        {/* Redirections anciennes URL */}
+        <Route
+          path="/articles/ransomware-que-faire"
+          element={<Navigate to="/articles/extorsion-cyber-activite-bloquee" replace />}
+        />
+        <Route
+          path="/articles/reconnaitre-mail-phishing"
+          element={<Navigate to="/articles/fraude-email-usurpation" replace />}
+        />
+        <Route
+          path="/articles/sauvegardes-strategie-pme"
+          element={<Navigate to="/articles/continuité-activite-restauration" replace />}
+        />
+        <Route
+          path="/articles/assurance-cyber-vs-antivirus"
+          element={<Navigate to="/articles/assurance-cyber-vs-prevention" replace />}
+        />
+
         {/* Pages articles individuelles */}
         <Route
           path="/articles/assurance-cyber-cest-quoi"
@@ -75,7 +93,7 @@ function App() {
           element={<ArticleErreursCourantes />}
         />
         <Route
-          path="/articles/ransomware-que-faire"
+          path="/articles/extorsion-cyber-activite-bloquee"
           element={<ArticleRansomwareQueFaire />}
         />
         <Route
@@ -83,15 +101,15 @@ function App() {
           element={<ArticleSecuriserMessageriePro />}
         />
         <Route
-          path="/articles/reconnaitre-mail-phishing"
+          path="/articles/fraude-email-usurpation"
           element={<ArticlePhishingMail />}
         />
         <Route
-          path="/articles/sauvegardes-strategie-pme"
+          path="/articles/continuité-activite-restauration"
           element={<ArticleSauvegardesPME />}
         />
         <Route
-          path="/articles/assurance-cyber-vs-antivirus"
+          path="/articles/assurance-cyber-vs-prevention"
           element={<ArticleCyberVsAntivirus />}
         />
         <Route

@@ -5,11 +5,11 @@ export const articlesMeta = [
   },
   {
     slug: "pourquoi-pme-cibles-cyberattaques",
-    title: "Pourquoi les PME sont devenues la cible n°1 des cyberattaques",
+    title: "Pourquoi les PME sont les plus exposées aux pertes d’exploitation",
   },
   {
     slug: "combien-coute-une-cyberattaque",
-    title: "Combien coûte réellement une cyberattaque pour une petite entreprise ?",
+    title: "Combien coûte un sinistre cyber pour une petite entreprise ?",
   },
   {
     slug: "combien-coute-une-assurance-cyber",
@@ -17,35 +17,35 @@ export const articlesMeta = [
   },
   {
     slug: "erreurs-courantes-cyber-petites-entreprises",
-    title: "7 erreurs de cybersécurité que font (presque) toutes les petites entreprises",
+    title: "7 erreurs d’assurabilité qui augmentent le coût d’un sinistre",
   },
   {
-    slug: "ransomware-que-faire",
-    title: "Ransomware : que faire si votre entreprise est bloquée ?",
+    slug: "extorsion-cyber-activite-bloquee",
+    title: "Extorsion cyber : que faire si l’activité est bloquée ?",
   },
   {
     slug: "securiser-messagerie-pro",
-    title: "Comment sécuriser votre messagerie professionnelle en 5 étapes",
+    title: "Messagerie pro : prérequis d’éligibilité à l’assurance cyber",
   },
   {
-    slug: "reconnaitre-mail-phishing",
-    title: "Comment reconnaître un mail de phishing en moins de 10 secondes",
+    slug: "fraude-email-usurpation",
+    title: "Fraudes par email : obligations de l’assuré et bonnes pratiques",
   },
   {
-    slug: "sauvegardes-strategie-pme",
-    title: "Sauvegardes : la stratégie minimale pour ne pas tout perdre",
+    slug: "continuité-activite-restauration",
+    title: "Continuité d’activité : exigences minimales d’assurabilité",
   },
   {
-    slug: "assurance-cyber-vs-antivirus",
-    title: "Assurance cyber vs antivirus : pourquoi les deux sont indispensables",
+    slug: "assurance-cyber-vs-prevention",
+    title: "Assurance cyber et prérequis techniques : ce que l’assureur attend",
   },
   {
     slug: "former-equipes-risque-cyber",
-    title: "Former ses équipes au risque cyber : le meilleur pare-feu humain",
+    title: "Obligations de l’assuré : sensibilisation des équipes",
   },
   {
     slug: "freelances-independants-cyber-risques",
-    title: "Freelances & indépendants : pourquoi vous êtes vulnérables aux cyberattaques",
+    title: "Indépendants : pourquoi l’assurance cyber protège votre trésorerie",
   },
   {
     slug: "artisans-btp-assurance-cyber",
@@ -53,19 +53,19 @@ export const articlesMeta = [
   },
   {
     slug: "ecommerce-vol-donnees",
-    title: "E-commerce & vol de données : comment limiter les dégâts ?",
+    title: "E-commerce : responsabilité et coûts en cas de sinistre",
   },
   {
     slug: "cloud-et-responsabilite",
-    title: "Cloud, logiciels en ligne et responsabilité : qui est responsable en cas d’attaque ?",
+    title: "Cloud et responsabilité contractuelle : qui assume quoi ?",
   },
   {
     slug: "cyber-et-rgpd",
-    title: "Cyber-risque et RGPD : ce que doit savoir une petite entreprise",
+    title: "RGPD et assurance cyber : responsabilités et frais couverts",
   },
   {
     slug: "checklist-cyber-pme",
-    title: "Checklist cybersécurité : 15 points à vérifier dans votre PME",
+    title: "Checklist assurance cyber : informations clés pour souscrire",
   },
   {
     slug: "comment-choisir-assurance-cyber",
@@ -73,7 +73,7 @@ export const articlesMeta = [
   },
   {
     slug: "cas-reel-pme-attaque",
-    title: "Cas concret : comment une PME a géré une cyberattaque majeure",
+    title: "Cas concret : gestion d’un sinistre et indemnisation",
   },
   {
     slug: "faq-assurance-cyber-complet",

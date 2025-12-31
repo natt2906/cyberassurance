@@ -19,7 +19,7 @@ export default function FinalCTA({ onOpenDrawer }: FinalCTAProps) {
     trackEvent("cta_click", {
       location: "final_cta",
       action: "obtenir_audit",
-      label: "Obtenir mon audit cyber gratuit",
+      label: "Faire ma demande de couverture cyber",
     });
     if (window.innerWidth < 768 && onOpenDrawer) {
       onOpenDrawer();
@@ -37,14 +37,14 @@ export default function FinalCTA({ onOpenDrawer }: FinalCTAProps) {
           <div className="relative bg-gradient-to-br from-blue-500/20 to-violet-500/20 backdrop-blur-xl border-2 border-blue-400/50 rounded-3xl p-12 lg:p-16">
             <div className="text-center space-y-8">
               <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Obtenez votre{" "}
+                Faites votre{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
-                  audit cyber gratuit.
+                  demande de couverture cyber.
                 </span>
               </h2>
 
               <p className="text-2xl text-blue-100">
-                Un diagnostic clair, sans engagement.
+                Une réponse claire, sans engagement.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ export default function FinalCTA({ onOpenDrawer }: FinalCTAProps) {
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105"
                 >
                   <Zap className="w-4 h-4" />
-                  Obtenir mon audit cyber gratuit
+                  Faire ma demande de couverture cyber
                 </button>
               </div>
 

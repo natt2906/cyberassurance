@@ -6,10 +6,17 @@ type Props = {
 };
 
 const suggestionsMap: Record<string, string[]> = {
-  "assurance-cyber-cest-quoi": ["comment-choisir-assurance-cyber", "combien-coute-une-assurance-cyber", "assurance-cyber-vs-antivirus"],
-  "ransomware-que-faire": ["sauvegardes-strategie-pme", "combien-coute-une-cyberattaque", "securiser-messagerie-pro"],
-  "checklist-cyber-pme": ["erreurs-courantes-cyber-petites-entreprises", "former-equipes-risque-cyber", "sauvegardes-strategie-pme"],
-  "reconnaitre-mail-phishing": ["securiser-messagerie-pro", "former-equipes-risque-cyber", "freelances-independants-cyber-risques"],
+  "assurance-cyber-cest-quoi": ["comment-choisir-assurance-cyber", "combien-coute-une-assurance-cyber", "assurance-cyber-vs-prevention"],
+  "extorsion-cyber-activite-bloquee": ["continuité-activite-restauration", "combien-coute-une-cyberattaque", "securiser-messagerie-pro"],
+  "checklist-cyber-pme": ["erreurs-courantes-cyber-petites-entreprises", "former-equipes-risque-cyber", "continuité-activite-restauration"],
+  "fraude-email-usurpation": ["securiser-messagerie-pro", "former-equipes-risque-cyber", "freelances-independants-cyber-risques"],
+};
+
+const imageBySlug: Record<string, string> = {
+  "extorsion-cyber-activite-bloquee": "ransomware-que-faire",
+  "fraude-email-usurpation": "reconnaitre-mail-phishing",
+  "continuité-activite-restauration": "sauvegardes-strategie-pme",
+  "assurance-cyber-vs-prevention": "assurance-cyber-vs-antivirus",
 };
 
 export default function RelatedArticles({ currentSlug }: Props) {
@@ -50,7 +57,7 @@ export default function RelatedArticles({ currentSlug }: Props) {
               <div className="h-32 w-full overflow-hidden">
                 <img
                   loading="lazy"
-                  src={`/articles/${art.slug}.png`}
+                  src={`/articles/${imageBySlug[art.slug] ?? art.slug}.png`}
                   alt={art.title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />

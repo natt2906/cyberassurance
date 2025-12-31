@@ -7,19 +7,19 @@ export default function HowItWorks() {
       number: '1',
       icon: ClipboardList,
       title: 'Répondez à quelques questions',
-      description: 'Activité, taille, outils critiques - en 30 secondes'
+      description: 'Secteur, exposition et enjeux financiers'
     },
     {
       number: '2',
       icon: Zap,
-      title: 'Recevez votre tarif instantané',
-      description: 'Adapté précisément à votre entreprise'
+      title: 'Recevez une proposition claire',
+      description: 'Garanties, franchises, plafonds et options'
     },
     {
       number: '3',
       icon: CheckCircle,
-      title: "Soyez protégé dès aujourd'hui",
-      description: "Contre les attaques et l'arrêt d'activité"
+      title: "Activez votre couverture",
+      description: "Protection financière et assistance 24/7"
     }
   ];
 
@@ -35,7 +35,7 @@ export default function HowItWorks() {
     trackEvent("cta_click", {
       location: "how_it_works",
       action: "obtenir_audit",
-      label: "Obtenir mon audit cyber gratuit",
+      label: "Faire ma demande de couverture cyber",
     });
     scrollToContact();
   };
@@ -80,7 +80,7 @@ export default function HowItWorks() {
             
             className="bg-gradient-to-r from-blue-500 to-violet-500 text-white px-8 py-3 rounded-full text-sm font-semibold shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
           >
-            Obtenir mon audit cyber gratuit
+            Faire ma demande de couverture cyber
           </button>
         </div>
 

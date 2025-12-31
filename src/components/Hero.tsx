@@ -18,7 +18,7 @@ export default function Hero({ onOpenDrawer }: HeroProps) {
     trackEvent("cta_click", {
       location: "hero",
       action: "obtenir_audit",
-      label: "Obtenir mon audit cyber gratuit",
+      label: "Faire ma demande de couverture cyber",
     });
     if (window.innerWidth < 768 && onOpenDrawer) {
       onOpenDrawer();
@@ -39,24 +39,24 @@ export default function Hero({ onOpenDrawer }: HeroProps) {
           {/* TEXTE */}
           <div className="order-2 lg:order-1 space-y-8">
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-              Une cyberattaque peut{" "}
+              Un sinistre cyber peut{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">
                 tout arrêter.
               </span>{" "}
-              Protégez votre activité.
+              Protégez votre trésorerie.
             </h1>
 
             <p className="text-xl lg:text-2xl text-blue-100">
-              Obtenez un audit cyber gratuit pour PME afin d’identifier vos risques
-              et les priorités d’action avant qu’un incident ne bloque votre activité.
+              Faites votre demande de couverture cyber pour évaluer l’impact financier
+              d’un sinistre et les garanties adaptées avant une interruption d’activité.
             </p>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-blue-100/90">
-              <p className="text-sm font-semibold text-white">Une cyberattaque peut :</p>
+              <p className="text-sm font-semibold text-white">Un sinistre peut générer :</p>
               <ul className="mt-2 space-y-1 text-sm">
-                <li>• Paralyser votre activité plusieurs jours</li>
-                <li>• Coûter des dizaines de milliers d&apos;euros</li>
-                <li>• Compromettre vos données clients</li>
+                <li>• Pertes d’exploitation et trésorerie sous tension</li>
+                <li>• Frais de gestion de crise et d’assistance 24/7</li>
+                <li>• Responsabilité civile, frais juridiques et RGPD</li>
               </ul>
             </div>
 
@@ -66,13 +66,13 @@ export default function Hero({ onOpenDrawer }: HeroProps) {
                 onClick={handleClickAudit}
                 className="w-full bg-gradient-to-r from-blue-500/80 to-violet-500/80 text-white px-10 py-4 rounded-full text-[20px] font-semibold shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-400 hover:to-violet-400 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
-                Obtenir mon audit cyber gratuit
+                Faire ma demande de couverture cyber
               </button>
             </div>
 
             <div className="flex flex-wrap gap-3 pt-4">
               {[
-                "Audit sans engagement",
+                "Demande sans engagement",
                 "Réponse sous 24h ouvrées",
                 "Données confidentielles",
               ].map((item) => (

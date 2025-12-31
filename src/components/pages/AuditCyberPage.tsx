@@ -7,6 +7,7 @@ import { pushDataLayerEvent, trackEvent } from "../../analytics/gtag";
 import BottomSheet from "../ui/BottomSheet";
 import StickyBar from "../ui/StickyBar";
 import MultiStepForm from "../MultiStepForm";
+import InsuranceCoverage from "../InsuranceCoverage";
 
 export default function AuditCyberPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -40,19 +41,19 @@ export default function AuditCyberPage() {
   };
 
   const benefits = [
-    "Audit rapide orienté risques concrets",
-    "Recommandations actionnables adaptées à votre secteur",
+    "Demande rapide orientée garanties",
+    "Recommandations adaptées à votre secteur",
     "Éclairage sur l'impact financier potentiel",
   ];
 
   const valueCards = [
     {
-      title: "Score d'exposition",
-      description: "Une synthèse claire des vulnérabilités les plus critiques.",
+      title: "Impact financier",
+      description: "Synthèse claire des pertes d’exploitation possibles.",
     },
     {
-      title: "3 priorités d'action",
-      description: "Les gestes à fort impact à mettre en place rapidement.",
+      title: "Priorités assurantielles",
+      description: "Garanties et options à privilégier selon votre métier.",
     },
     {
       title: "Projection financière",
@@ -60,7 +61,7 @@ export default function AuditCyberPage() {
     },
     {
       title: "Orientation assurance",
-      description: "Si pertinent, une proposition adaptée à votre profil.",
+      description: "Si pertinent, une proposition adaptée à vos enjeux.",
     },
   ];
 
@@ -75,23 +76,23 @@ export default function AuditCyberPage() {
   const steps = [
     {
       title: "Répondez au formulaire",
-      description: "2 questions pour comprendre votre contexte.",
+      description: "2 questions pour cadrer votre profil assurantiel.",
     },
     {
       title: "Analyse rapide",
-      description: "Nos experts évaluent vos principaux risques.",
+      description: "Nos experts évaluent l’impact financier et la couverture utile.",
     },
     {
       title: "Retour sous 24h",
-      description: "Synthèse claire + recommandations prioritaires.",
+      description: "Synthèse claire + garanties prioritaires.",
     },
   ];
 
   return (
     <div className="min-h-screen bg-[#0b1531]">
       <SeoHead
-        title="Audit cyber gratuit pour PME | Assurance Cyber Sécurité"
-        description="Recevez un audit cyber gratuit en 2 minutes. Évaluation des risques, recommandations prioritaires et estimation de votre exposition financière."
+        title="Diagnostic de couverture cyber gratuit pour PME | Assurance Cyber Sécurité"
+        description="Faites votre demande de couverture cyber en 2 minutes. Impact financier, garanties prioritaires et estimation de votre exposition."
         canonical={`${baseSiteUrl}/audit-cyber`}
         ogImage={`${baseSiteUrl}/og-image.png`}
       />
@@ -102,10 +103,10 @@ export default function AuditCyberPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-violet-600/10 to-transparent"></div>
           <div className="relative max-w-5xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-              Audit cyber gratuit pour sécuriser votre activité
+              Demande de couverture cyber pour sécuriser votre activité
             </h1>
             <p className="mt-5 text-xl text-blue-100">
-              Identifiez vos risques critiques et recevez des priorités d'action concrètes en moins de 24h.
+              Identifiez l’impact financier potentiel et recevez des garanties adaptées en moins de 24h.
             </p>
 
             <div className="mt-8 flex flex-col items-center gap-4">
@@ -123,7 +124,7 @@ export default function AuditCyberPage() {
                 onClick={handleCtaClick}
                 className="mt-4 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-transform hover:scale-105"
               >
-                Obtenir mon audit cyber gratuit
+                Faire ma demande de couverture cyber
               </button>
             </div>
           </div>
@@ -186,6 +187,8 @@ export default function AuditCyberPage() {
           </div>
         </section>
 
+        <InsuranceCoverage />
+
         <div className="hidden md:block">
           <ContactForm trackingSource="audit_page" sectionId="contact" />
         </div>
@@ -199,8 +202,8 @@ export default function AuditCyberPage() {
           </div>
         </section>
       </main>
-      <StickyBar label="Obtenir mon audit gratuit (2 min)" onClick={openDrawer} />
-      <BottomSheet open={drawerOpen} onClose={closeDrawer} title="Audit cyber gratuit">
+      <StickyBar label="Faire ma demande de couverture cyber (2 min)" onClick={openDrawer} />
+      <BottomSheet open={drawerOpen} onClose={closeDrawer} title="Diagnostic de couverture cyber gratuit">
         <MultiStepForm
           trackingSource="audit_drawer"
           onSubmitted={closeDrawer}

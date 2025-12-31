@@ -8,6 +8,7 @@ import Solution from "../../components/Solution";
 import HowItWorks from "../../components/HowItWorks";
 import Testimonials from "../../components/Testimonials";
 import Comparison from "../../components/Comparison";
+import InsuranceCoverage from "../../components/InsuranceCoverage";
 import HomeArticlesHighlights from "../../components/HomeArticlesHighlights";
 import FAQ from "../../components/FAQ";
 import FinalCTA from "../../components/FinalCTA";
@@ -36,7 +37,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#0b1531]">
       <SeoHead
         title="Assurance cyber pour PME, artisans et indépendants | Assurance Cyber Sécurité"
-        description="Protégez votre entreprise contre les cyberattaques : couverture financière, assistance 24/7, messagerie sécurisée, sauvegardes et réponse à incident. Devis rapide pour TPE/PME."
+        description="Assurance cyber pour professionnels : couverture financière, pertes d’exploitation, assistance 24/7, responsabilité civile, frais juridiques/RGPD. Devis rapide."
         canonical={baseSiteUrl}
         ogImage={`${baseSiteUrl}/og-image.png`}
       />
@@ -52,13 +53,14 @@ export default function HomePage() {
         <HowItWorks />
         <Testimonials />
         <Comparison />
+        <InsuranceCoverage />
         <HomeArticlesHighlights />
         <SocialSection />  
         <FAQ />
         <FinalCTA onOpenDrawer={openDrawer} />
       </main>
-      <StickyBar label="Obtenir mon audit gratuit (2 min)" onClick={openDrawer} />
-      <BottomSheet open={drawerOpen} onClose={closeDrawer} title="Audit cyber gratuit">
+      <StickyBar label="Faire ma demande de couverture cyber (2 min)" onClick={openDrawer} />
+      <BottomSheet open={drawerOpen} onClose={closeDrawer} title="Diagnostic de couverture cyber gratuit">
         <MultiStepForm
           trackingSource="home_drawer"
           onSubmitted={closeDrawer}

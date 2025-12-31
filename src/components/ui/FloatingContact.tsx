@@ -43,7 +43,7 @@ export default function FloatingContact() {
       honeypot: honeypotInput,
       embeds: [
         {
-          title: "📥 Nouvelle demande d'audit cyber (bouton flottant)",
+          title: "📥 Nouvelle demande de couverture cyber (bouton flottant)",
           color: 5814783,
           fields: [
             { name: "Nom et prénom", value: formValues.name || "-", inline: true },
@@ -94,7 +94,7 @@ export default function FloatingContact() {
         onClick={() => setOpen(true)}
         className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-50 hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/50 hover:shadow-blue-500/70 transition-transform hover:scale-105"
       >
-        🛡️ Audit cyber gratuit
+        🛡️ Diagnostic de couverture cyber gratuit
       </button>
 
       {open && (
@@ -112,7 +112,7 @@ export default function FloatingContact() {
             <div className="flex items-start justify-between mb-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-blue-300/80">Demande rapide</p>
-                <h3 className="text-2xl font-bold text-white">Recevez votre audit cyber gratuit</h3>
+                <h3 className="text-2xl font-bold text-white">Faites votre demande de couverture cyber</h3>
               </div>
               <button
                 type="button"
@@ -202,7 +202,7 @@ export default function FloatingContact() {
                     onChange={(e) => handleChange("wants_advice", e.target.checked)}
                     className="mt-0.5 h-4 w-4 rounded border-blue-500/40 bg-slate-950/60 text-blue-500 focus:ring-blue-500"
                   />
-                  Je souhaite recevoir des conseils personnalisés à l’issue de l’audit.
+                  Je souhaite recevoir des conseils personnalisés à l’issue de ma demande.
                 </label>
                 {/* Honeypot anti-bot */}
                 <input type="text" name="hp" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -219,10 +219,10 @@ export default function FloatingContact() {
                     disabled={isSubmitting}
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? "Envoi en cours…" : "Obtenir mon audit cyber gratuit"}
+                    {isSubmitting ? "Envoi en cours…" : "Faire ma demande de couverture cyber"}
                   </button>
                   <p className="text-xs text-blue-200/80">
-                    Audit réalisé par des experts, sans obligation de souscription. Données strictement
+                    Demande traitée par des experts, sans obligation de souscription. Données strictement
                     confidentielles. Résultats sous 24h ouvrées.
                   </p>
                 </div>

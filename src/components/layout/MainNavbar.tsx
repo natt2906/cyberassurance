@@ -49,7 +49,7 @@ export default function MainNavbar() {
             to="/audit-cyber"
             className={`${navBaseClass} ${isAudit ? navActiveClass : navInactiveClass}`}
           >
-            Audit gratuit
+            Demande de couverture
           </Link>
 
           <Link
@@ -174,7 +174,7 @@ export default function MainNavbar() {
               onClick={() => setOpenMenu(false)}
               className={`${navBaseClass} ${isAudit ? navActiveClass : navInactiveClass}`}
             >
-              Audit gratuit
+              Demande de couverture
             </Link>
             <Link
               to="/assistance"

@@ -9,23 +9,23 @@ export default function Solution() {
     },
     {
       icon: Wrench,
-      title: 'Remise en route rapide',
-      description: 'Experts cyber disponibles 24/7 pour restaurer votre activité'
+      title: 'Gestion de crise 24/7',
+      description: "Assistance, coordination et continuité d'activité"
     },
     {
       icon: Mail,
-      title: 'Assistance mails & pièges',
-      description: 'Analyse des risques et protection contre le phishing'
+      title: 'Responsabilité & conformité',
+      description: 'Accompagnement RGPD, notifications et frais juridiques'
     },
     {
       icon: Search,
-      title: 'Audit de sécurité inclus',
-      description: 'Évaluation complète de vos vulnérabilités'
+      title: 'Cadre assurantiel clair',
+      description: 'Garanties, franchises, plafonds et exclusions lisibles'
     },
     {
       icon: FileText,
-      title: 'Couverture simple et lisible',
-      description: 'Pas de jargon technique, tout est clair'
+      title: 'Souscription adaptée',
+      description: 'Conditions d’éligibilité et obligations de l’assuré'
     }
   ];
 
@@ -58,7 +58,7 @@ export default function Solution() {
 
         <div className="text-center">
           <p className="text-blue-200 text-sm">
-            Audit express et recommandations prioritaires selon votre secteur.
+            Diagnostic d’assurabilité et recommandations de garanties par secteur.
           </p>
         </div>
       </div>

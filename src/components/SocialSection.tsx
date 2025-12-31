@@ -3,10 +3,10 @@ export default function SocialSection() {
     <section className="px-4 py-20">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Suivez nos astuces cyber au quotidien
+          Suivez nos conseils assurance cyber au quotidien
         </h2>
         <p className="text-blue-200 mb-8">
-          Chaque jour, des conseils concrets pour protéger votre entreprise des cyberattaques.
+          Chaque jour, des repères clairs sur garanties, sinistres et impacts financiers.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">

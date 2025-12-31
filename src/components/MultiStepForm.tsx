@@ -91,7 +91,7 @@ export default function MultiStepForm({
       content: null,
       embeds: [
         {
-          title: "📥 Nouvelle demande d'audit cyber",
+          title: "📥 Nouvelle demande de couverture cyber",
           color: 5814783,
           fields: [
             { name: "Nom et prénom", value: values.name || "-", inline: true },
@@ -136,7 +136,7 @@ export default function MultiStepForm({
         {hasSubmitted ? (
           <div className="text-center space-y-4">
             <h3 className="text-2xl font-semibold text-white">
-              Merci, votre demande d&apos;audit a bien été envoyée ✅
+              Merci, votre demande de couverture cyber a bien été envoyée ✅
             </h3>
             <p className="text-blue-100/80">
               Un expert vous recontactera si des précisions sont nécessaires.
@@ -146,9 +146,9 @@ export default function MultiStepForm({
           <>
             {isDrawer ? (
               <div className="mb-6 space-y-2">
-                <h3 className="text-xl font-semibold text-white">Audit cyber gratuit en 2 minutes</h3>
+                <h3 className="text-xl font-semibold text-white">Demande de couverture cyber en 2 minutes</h3>
                 <p className="text-sm text-blue-100/80">
-                  Répondez à 2 questions rapides pour recevoir votre diagnostic sous 24h ouvrées.
+                  Répondez à 2 questions rapides pour recevoir votre réponse sous 24h ouvrées.
                 </p>
               </div>
             ) : (
@@ -167,9 +167,9 @@ export default function MultiStepForm({
                     Ce que vous obtenez en 2 minutes :
                   </h3>
                   <ul className="mt-3 space-y-2 text-sm text-blue-100">
-                    <li>• Évaluation claire de vos risques cyber</li>
-                    <li>• Recommandations prioritaires</li>
-                    <li>• Estimation de votre exposition financière</li>
+                    <li>• Évaluation claire de votre exposition financière</li>
+                    <li>• Garanties prioritaires</li>
+                    <li>• Estimation de vos pertes d’exploitation</li>
                   </ul>
                 </div>
 
@@ -178,8 +178,8 @@ export default function MultiStepForm({
                     Ce que vous recevez sous 24h
                   </h3>
                   <ul className="mt-3 space-y-2 text-sm text-blue-100">
-                    <li>• Évaluation rapide de votre exposition (score)</li>
-                    <li>• Recommandations prioritaires (3 actions)</li>
+                    <li>• Synthèse claire de votre profil assurantiel</li>
+                    <li>• Recommandations de garanties prioritaires</li>
                     <li>• Proposition d&apos;assurance adaptée (si pertinent)</li>
                   </ul>
                 </div>
@@ -253,7 +253,7 @@ export default function MultiStepForm({
                   disabled={!canSubmit || isSubmitting}
                   className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Envoi en cours…" : "Recevoir mon audit"}
+                  {isSubmitting ? "Envoi en cours…" : "Faire ma demande de couverture cyber"}
                 </button>
 
                 <div className="flex flex-wrap items-center gap-4 text-xs text-blue-200/80">
@@ -278,10 +278,10 @@ export default function MultiStepForm({
                   </p>
                   <p>
                     En soumettant ce formulaire, vous acceptez d&apos;être recontacté uniquement
-                    dans le cadre de cet audit cyber. Données confidentielles.
+                    dans le cadre de cette demande de couverture cyber. Données confidentielles.
                   </p>
                   <p>
-                    Audit réalisé par des experts, sans obligation de souscription. Données
+                    Demande traitée par des experts, sans obligation de souscription. Données
                     strictement confidentielles. Résultats sous 24h ouvrées.
                   </p>
                 </div>

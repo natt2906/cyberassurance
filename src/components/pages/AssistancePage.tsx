@@ -15,53 +15,53 @@ export default function AssistancePage() {
   };
 
   const checklist = [
-    "Isoler les postes touchés et couper les accès suspects.",
-    "Prévenir les équipes internes pour limiter la propagation.",
-    "Conserver les preuves (logs, emails, captures).",
-    "Ne pas payer de rançon sans avis expert.",
-    "Activer vos sauvegardes si disponibles.",
+    "Déclarer le sinistre dès les premiers impacts.",
+    "Activer la cellule de crise et centraliser les informations.",
+    "Documenter les faits et les coûts engagés.",
+    "Valider toute décision sensible avec l’assureur.",
+    "Informer les parties prenantes selon les obligations contractuelles.",
   ];
 
   const assistancePoints = [
-    "Analyse rapide de l'incident et des impacts",
-    "Coordination avec les experts techniques 24/7",
-    "Aide juridique et conformité RGPD",
-    "Plan de reprise d'activité priorisé",
-    "Suivi et recommandations post-incident",
+    "Qualification du sinistre et analyse des impacts financiers",
+    "Coordination des intervenants et assistance 24/7",
+    "Aide juridique, conformité RGPD et notifications",
+    "Plan de continuité d’activité et suivi de reprise",
+    "Gestion du dossier d’indemnisation",
   ];
 
   const faqs = [
     {
       question: "L'assistance est-elle disponible 24/7 ?",
-      answer: "Oui, nos experts sont mobilisables à tout moment en cas d'urgence.",
+      answer: "Oui, une cellule de crise est mobilisable à tout moment.",
     },
     {
-      question: "Dois-je avoir un prestataire informatique ?",
-      answer: "Non, nous travaillons avec ou sans prestataire existant.",
+      question: "Qui coordonne les intervenants ?",
+      answer: "L’assureur pilote la coordination avec vos parties prenantes.",
     },
     {
-      question: "Que faire en cas de ransomware ?",
-      answer: "Isoler les machines, conserver les preuves et contacter l'assistance immédiatement.",
+      question: "Que faire en cas d’extorsion ?",
+      answer: "Déclarez immédiatement et suivez les consignes contractuelles.",
     },
     {
       question: "Combien de temps pour relancer l'activité ?",
-      answer: "Cela dépend du contexte, mais l'objectif est de réduire l'arrêt au minimum.",
+      answer: "L’objectif est de limiter l’arrêt, selon les garanties souscrites.",
     },
     {
       question: "L'assistance inclut-elle la gestion RGPD ?",
-      answer: "Oui, nous vous accompagnons sur les obligations légales et la communication.",
+      answer: "Oui, nous accompagnons les obligations légales et la communication.",
     },
     {
-      question: "Puis-je faire un audit avant un incident ?",
-      answer: "Oui, l'audit gratuit permet d'anticiper et réduire les risques.",
+      question: "Puis-je faire une demande de couverture cyber avant un incident ?",
+      answer: "Oui, la demande permet d’adapter les garanties.",
     },
   ];
 
   return (
     <div className="min-h-screen bg-[#0b1531]">
       <SeoHead
-        title="Assistance cyber 24/7 en cas d'attaque | Assurance Cyber Sécurité"
-        description="Assistance cyber en cas d'attaque : actions immédiates, experts 24/7, gestion RGPD et plan de reprise d'activité."
+        title="Assistance 24/7 en cas de sinistre cyber | Assurance Cyber Sécurité"
+        description="Assistance 24/7 en cas de sinistre : gestion de crise, RGPD, continuité d’activité et indemnisation."
         canonical={`${baseSiteUrl}/assistance`}
         ogImage={`${baseSiteUrl}/og-image.png`}
       />
@@ -71,10 +71,10 @@ export default function AssistancePage() {
         <section className="px-4 py-16 lg:py-24">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-              Assistance cyber : quoi faire en cas d'attaque ?
+              Assistance 24/7 : quoi faire en cas de sinistre ?
             </h1>
             <p className="mt-5 text-xl text-blue-100">
-              Une réponse structurée pour limiter l'impact, relancer l'activité et protéger vos données.
+              Une réponse structurée pour limiter l’impact financier et relancer l’activité.
             </p>
           </div>
         </section>
@@ -132,7 +132,7 @@ export default function AssistancePage() {
               onClick={handleCtaClick}
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-transform hover:scale-105"
             >
-              Demander un audit cyber gratuit
+              Faire ma demande de couverture cyber
             </Link>
           </div>
         </section>

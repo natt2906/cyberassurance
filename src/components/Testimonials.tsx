@@ -6,21 +6,21 @@ export default function Testimonials() {
       name: 'Marie Dubois',
       role: 'Directrice, Cabinet Comptable',
       company: 'Compta Expert',
-      content: "Suite à une tentative de ransomware, l'équipe a réagi en moins de 2 heures. Nos données ont été sauvées et nous avons pu reprendre notre activité le jour même.",
+      content: "Après un sinistre, l’assistance a coordonné la gestion de crise et les frais ont été pris en charge. Nous avons repris l’activité sans mettre la trésorerie en danger.",
       rating: 5
     },
     {
       name: 'Thomas Martin',
       role: 'CEO, Agence Marketing',
       company: 'Digital Boost',
-      content: "Avant, je pensais que ça n'arrivait qu'aux autres. Après l'attaque, l'assurance a tout pris en charge : experts, frais légaux, perte de CA. Un soulagement total.",
+      content: "L’assurance a couvert la perte de chiffre d’affaires et les frais juridiques. Le contrat était clair sur les franchises et plafonds : aucun stress.",
       rating: 5
     },
     {
       name: 'Sophie Laurent',
       role: 'Gérante, E-commerce',
       company: 'Mode & Style',
-      content: "Notre site a été piraté pendant les soldes. Grâce à la couverture, nous avons été indemnisés pour la perte de chiffre d'affaires. Impossible de s'en passer maintenant.",
+      content: "La perte d’exploitation a été indemnisée rapidement. Sans cette couverture, l’impact sur nos ventes aurait été majeur.",
       rating: 5
     }
   ];

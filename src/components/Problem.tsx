@@ -5,19 +5,19 @@ export default function Problem() {
     {
       icon: AlertTriangle,
       title: "Arrêt total d'activité",
-      description: 'Facturation, emails, logiciel métier indisponibles',
+      description: "Perte d'exploitation et arrêt de facturation",
       color: 'from-red-500 to-orange-500'
     },
     {
       icon: Lock,
-      title: 'Données volées ou bloquées',
-      description: 'Rançongiciel, chiffrage, fuite de données',
+      title: 'Responsabilité & conformité',
+      description: 'RGPD, clients impactés, obligations déclaratives',
       color: 'from-violet-500 to-purple-500'
     },
     {
       icon: DollarSign,
-      title: 'Coûts explosifs',
-      description: 'Experts informatiques, perte de CA, notification RGPD',
+      title: 'Coûts de crise',
+      description: "Frais d'assistance, juridiques, communication",
       color: 'from-blue-500 to-cyan-500'
     }
   ];
@@ -27,11 +27,11 @@ export default function Problem() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Une attaque suffit pour tout bloquer.
+            Un sinistre suffit pour désorganiser l’activité.
           </h2>
           <p className="text-xl lg:text-2xl text-blue-200">
-            Et ce n&apos;est plus une question de <span className="text-red-400 font-bold">SI</span>, mais de{' '}
-            <span className="text-red-400 font-bold">QUAND</span>.
+            La question n’est plus le <span className="text-red-400 font-bold">SI</span>, mais l’impact
+            financier et opérationnel <span className="text-red-400 font-bold">QUAND</span>.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function Problem() {
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             <p className="text-2xl lg:text-4xl font-bold text-white">
-              1 TPE/PME sur 5 ferme dans les 6 mois suivant une cyberattaque.
+              Une interruption non assurée peut fragiliser la trésorerie en quelques semaines.
             </p>
           </div>
         </div>

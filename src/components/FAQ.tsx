@@ -6,29 +6,29 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: 'Mon antivirus ne suffit-il pas ?',
+      question: "Qu'est-ce qui déclenche un sinistre garanti ?",
       answer:
-        "Non. L'antivirus protège contre les virus connus, mais pas contre les attaques ciblées, les erreurs humaines, les ransomwares modernes ou l'arrêt de votre activité. L'assurance cyber couvre les conséquences financières et vous aide à redémarrer rapidement."
+        "Le déclencheur dépend du contrat : incident affectant la disponibilité, violation de données, réclamation d’un tiers, ou frais de gestion de crise. L’important est d’identifier le fait générateur et les garanties associées."
     },
     {
-      question: 'Je suis une petite entreprise, suis-je vraiment une cible ?',
+      question: "Quelles garanties sont les plus utiles pour une TPE/PME/ETI ?",
       answer:
-        'Oui, et même prioritaire ! Les pirates ciblent les TPE/PME car elles sont souvent moins protégées. 43% des cyberattaques visent les petites structures. Votre taille ne vous protège pas.'
+        "Perte d’exploitation, frais de gestion de crise, responsabilité civile, frais juridiques/RGPD et assistance 24/7. Ce socle protège la trésorerie et la continuité d’activité."
     },
     {
       question: 'Combien coûte une assurance cyber ?',
       answer:
-        "À partir de 30€/mois pour une TPE. Le tarif dépend de votre secteur, taille et niveau de risque. C’est jusqu’à 50 fois moins cher qu’une cyberattaque (60 000€ en moyenne pour une PME)."
+        "Le tarif dépend du secteur, de la taille, du chiffre d’affaires, des garanties choisies, franchises et plafonds. Le coût est souvent faible au regard des pertes d’exploitation potentielles."
     },
     {
-      question: "Suis-je couvert en cas d'erreur humaine ?",
+      question: "Quelles sont les exclusions et franchises typiques ?",
       answer:
-        "Oui ! La majorité des incidents proviennent d'erreurs humaines (phishing, mauvaise manipulation). Notre assurance couvre ces situations ainsi que les formations pour éviter les récidives."
+        "Chaque contrat prévoit des exclusions (ex. actes intentionnels, non‑respect des obligations déclaratives) et une franchise. Nous vous aidons à les comprendre avant souscription."
     },
     {
-      question: 'Faut-il un prestataire informatique ?',
+      question: "Y a-t-il des conditions d’éligibilité ?",
       answer:
-        "Non, pas obligatoire. Mais nous pouvons vous mettre en relation avec des experts certifiés. En cas d'incident, nos spécialistes interviennent immédiatement, que vous ayez ou non un prestataire."
+        "Oui, certains prérequis peuvent être demandés pour souscrire. Ils sont présentés clairement afin d’éviter les mauvaises surprises en cas de sinistre."
     }
   ];
 
@@ -42,7 +42,7 @@ export default function FAQ() {
               Questions fréquentes
             </h2>
             <p className="text-xl text-blue-200">
-              Tout ce que vous devez savoir sur la cyber-assurance
+              Tout ce que vous devez savoir sur l’assurance cyber
             </p>
           </div>
 

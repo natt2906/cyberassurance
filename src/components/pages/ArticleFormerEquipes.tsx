@@ -19,7 +19,7 @@ export default function ArticleFormerEquipes() {
 
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Former ses équipes au risque cyber : le meilleur pare-feu humain
+            Obligations de l’assuré : sensibilisation des équipes
           </h1>
 
           <img loading="lazy"
@@ -41,64 +41,37 @@ export default function ArticleFormerEquipes() {
   Pourquoi ce sujet est crucial pour les petites entreprises
 </h2>
 <p className="text-blue-200 leading-relaxed mb-4">
-  Le thème <strong>Former ses équipes au risque cyber : le meilleur pare-feu humain</strong> peut sembler abstrait tant que tout va bien.
-  Mais pour une TPE, une PME, un artisan ou un indépendant, un incident cyber peut
-  bloquer l’activité, faire perdre des données importantes ou casser la relation
-  de confiance avec les clients. Les grandes entreprises ont des équipes
-  informatiques, des plans de continuité et des procédures. Les petites structures,
-  elles, comptent souvent sur la chance ou quelques réflexes “maison”.
+  Ce sujet est crucial car un sinistre cyber se traduit d’abord par des pertes d’exploitation, des frais de gestion de crise et une responsabilité vis-à-vis des tiers. L’assurance cyber permet de transférer une partie de ces impacts pour protéger la trésorerie.
 </p>
 <p className="text-blue-200 leading-relaxed mb-6">
-  La réalité, c’est que les attaquants automatisent désormais leurs actions. Ils
-  scannent le web à la recherche d’entreprises mal protégées, d’identifiants
-  réutilisés, de boîtes mail peu sécurisées ou de logiciels non mis à jour.
-  Votre structure n’a pas besoin d’être connue pour être une cible. Elle doit
-  simplement être vulnérable, et c’est malheureusement le cas d’une majorité
-  de petites entreprises.
+  Au-delà du risque, l’enjeu est d’identifier les garanties, franchises, plafonds, exclusions et obligations de l’assuré. Ces éléments conditionnent l’indemnisation et la continuité d’activité.
 </p>
 
 <h2 className="text-2xl lg:text-3xl font-bold mt-10 mb-4">
   Les risques concrets liés à ce sujet
 </h2>
 <p className="text-blue-200 leading-relaxed mb-4">
-  En pratique, ignorer le sujet “Former ses équipes au risque cyber : le meilleur pare-feu humain” peut se traduire par plusieurs types
-  de conséquences : perte de fichiers, chantage financier, blocage de plusieurs
-  jours, relations clients dégradées, atteinte à l’image de l’entreprise, voire
-  dépôt de plainte ou mise en cause juridique. Ce n’est pas seulement un sujet
-  informatique, c’est un sujet de continuité d’activité et de gestion de risque.
+  En pratique, ignorer ce sujet peut se traduire par un choc de trésorerie, des litiges et une gestion de crise coûteuse. Ce n’est pas seulement un enjeu opérationnel, c’est un enjeu assurantiel.
 </p>
 <ul className="list-disc ml-6 space-y-2 text-blue-200 mb-6">
-  <li>Interruption partielle ou totale de votre activité ;</li>
-  <li>Perte de données clients, de devis, de factures ou de dossiers ;</li>
-  <li>Retards de chantiers, de livraisons ou de projets ;</li>
-  <li>Clients inquiets ou mécontents, qui perdent confiance ;</li>
-  <li>Coûts imprévus pour faire intervenir des prestataires en urgence.</li>
+  <li>Pertes d’exploitation non indemnisées ;</li>
+  <li>Frais juridiques, RGPD et notifications à votre charge ;</li>
+  <li>Responsabilité civile vis-à-vis de clients ou partenaires ;</li>
+  <li>Coûts de gestion de crise et de communication ;</li>
+  <li>Décalage de trésorerie lié aux franchises et plafonds.</li>
 </ul>
 
 <h2 className="text-2xl lg:text-3xl font-bold mt-10 mb-4">
   Ce qu’une petite entreprise peut mettre en place concrètement
 </h2>
 <p className="text-blue-200 leading-relaxed mb-4">
-  La bonne nouvelle, c’est qu’il n’est pas nécessaire de devenir expert en sécurité
-  pour réduire fortement le risque. Quelques actions simples, alignées avec le sujet
-  “Former ses équipes au risque cyber : le meilleur pare-feu humain”, peuvent déjà faire une vraie différence : mieux protéger les accès,
-  sensibiliser les équipes, mettre en place des sauvegardes sérieuses et prévoir
-  un minimum de plan de secours si quelque chose se passe mal.
+  La bonne nouvelle, c’est qu’une assurance cyber bien structurée permet d’encadrer les pertes et d’organiser la réponse grâce à des garanties claires.
 </p>
 <p className="text-blue-200 leading-relaxed mb-4">
-  Dans l’idéal, ces mesures techniques sont complétées par une <strong>assurance
-  cyber adaptée</strong> à votre taille et à votre secteur. La sécurité réduit
-  la probabilité d’une attaque réussie, l’assurance limite les conséquences
-  financières et opérationnelles si l’attaque se produit malgré tout. Les deux
-  ensemble offrent un cadre de protection beaucoup plus solide que l’un ou l’autre
-  pris isolément.
+  Concrètement, il faut clarifier votre exposition, choisir les garanties prioritaires, définir franchises et plafonds, et vérifier les obligations de l’assuré prévues au contrat.
 </p>
 <p className="text-blue-200 leading-relaxed mb-8">
-  L’important est de ne pas attendre l’incident pour agir. Plus vous anticipez,
-  plus il sera simple et peu coûteux de renforcer votre protection. Et si vous
-  souhaitez être accompagné pour faire le point sur votre situation, un courtier
-  spécialisé en assurance cyber peut vous aider à y voir clair en quelques
-  questions seulement.
+  N’attendez pas un sinistre pour agir. Un courtier spécialisé en assurance cyber peut vous aider à ajuster votre couverture en fonction de votre secteur et de votre chiffre d’affaires.
 </p>
         </div>
       </main>

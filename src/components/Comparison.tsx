@@ -3,18 +3,18 @@ import { X, Check } from 'lucide-react';
 export default function Comparison() {
   const withoutInsurance = [
     "0€ remboursé en cas de perte d'activité",
-    'Aucune aide technique',
-    'Pas de prise en charge du rançongiciel',
-    'Gestion de crise à vos frais',
-    'Dommages illimités sur votre trésorerie'
+    "Aucune assistance de crise organisée",
+    "Frais juridiques et RGPD à votre charge",
+    "Pertes d'exploitation non indemnisées",
+    "Impact direct sur la trésorerie"
   ];
 
   const withInsurance = [
     "Perte d'exploitation couverte",
-    'Experts mobilisés immédiatement',
-    'Aide juridique & RGPD incluse',
-    'Couverture financière claire',
-    "Continuité d'activité assurée"
+    "Assistance 24/7 et pilotage de crise",
+    "Frais juridiques & RGPD pris en charge",
+    "Garanties claires, franchises définies",
+    "Continuité d'activité encadrée"
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function Comparison() {
                 <div className="p-3 bg-red-500/20 rounded-xl">
                   <X className="w-8 h-8 text-red-400" />
                 </div>
-                <h3 className="text-3xl font-bold text-white">Sans assurance cyber</h3>
+                <h3 className="text-3xl font-bold text-white">Sans couverture cyber</h3>
               </div>
 
               <div className="space-y-4">
@@ -64,7 +64,7 @@ export default function Comparison() {
                 <div className="p-3 bg-gradient-to-br from-blue-500 to-violet-500 rounded-xl">
                   <Check className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-white">Avec assurance cyber</h3>
+                <h3 className="text-3xl font-bold text-white">Avec couverture cyber</h3>
               </div>
 
               <div className="space-y-4">
@@ -87,7 +87,7 @@ export default function Comparison() {
 
         <div className="flex justify-center">
           <p className="text-blue-200 text-sm">
-            Recevez un audit gratuit pour savoir où concentrer vos efforts.
+            Faites votre demande de couverture cyber pour calibrer vos garanties.
           </p>
         </div>
       </div>

@@ -65,7 +65,7 @@ export default function ArticleAssuranceCyber() {
           </p>
 
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            Assurance cyber : c’est quoi ? Explication simple pour PME & artisans
+            Assurance cyber : c’est quoi ? Explication simple pour professionnels
           </h1>
 
           <p className="text-sm text-blue-300 mb-8">
@@ -73,9 +73,9 @@ export default function ArticleAssuranceCyber() {
           </p>
 
           <p className="text-lg text-blue-200 leading-relaxed mb-8">
-            Une cyberattaque peut arrêter votre entreprise du jour au lendemain. Mais comment fonctionne une{" "}
-            <strong>assurance cyber</strong> ? Et surtout : est-ce vraiment indispensable pour une PME,
-            un artisan ou un indépendant ? Voici l’explication la plus claire possible, sans jargon technique.
+            Un sinistre cyber peut arrêter votre activité du jour au lendemain. Mais comment fonctionne une{" "}
+            <strong>assurance cyber</strong> ? Et surtout : est-ce indispensable pour une PME,
+            un artisan, un indépendant ou une profession libérale ? Voici l’essentiel, sans jargon.
           </p>
 
           {/* Section 1 */}
@@ -84,17 +84,17 @@ export default function ArticleAssuranceCyber() {
           </h2>
           <p className="text-blue-200 leading-relaxed mb-4">
             L’<strong>assurance cyber</strong> est un contrat qui protège votre entreprise contre les conséquences
-            d’une cyberattaque : ransomware, vol de données, piratage de messagerie, sabotage, etc. Elle ne bloque
-            pas l’attaque (ça c’est le rôle des outils de sécurité), mais elle prend en charge :
+            d’un sinistre cyber. Elle ne réduit pas le risque en lui‑même : elle couvre l’impact financier et
+            organise la réponse. Elle prend en charge notamment :
           </p>
 
           <ul className="list-disc ml-6 space-y-2 text-blue-200 mb-6">
-            <li>les frais techniques pour remettre vos systèmes en état ;</li>
-            <li>la restauration ou la récupération de vos données ;</li>
-            <li>les pertes de chiffre d’affaires pendant l’arrêt d’activité ;</li>
-            <li>les honoraires d’experts en cybersécurité ;</li>
-            <li>les frais juridiques en cas de litige ou de fuite de données ;</li>
-            <li>la gestion de crise et la communication auprès de vos clients.</li>
+            <li>les pertes d’exploitation pendant l’arrêt d’activité ;</li>
+            <li>les frais de gestion de crise et d’assistance 24/7 ;</li>
+            <li>la responsabilité civile vis‑à‑vis des tiers ;</li>
+            <li>les frais juridiques et RGPD ;</li>
+            <li>la communication de crise ;</li>
+            <li>la rançon encadrée selon conditions contractuelles.</li>
           </ul>
 
           <p className="text-blue-200 leading-relaxed mb-8">
@@ -104,24 +104,23 @@ export default function ArticleAssuranceCyber() {
 
           {/* Section 2 */}
           <h2 className="text-2xl lg:text-3xl font-bold mt-10 mb-4">
-            Pourquoi les petites entreprises sont les premières cibles ?
+            Pourquoi les petites entreprises doivent se couvrir ?
           </h2>
           <p className="text-blue-200 leading-relaxed mb-4">
-            Contrairement à une idée reçue, les hackers ne s’attaquent pas qu’aux grandes entreprises. Les données
-            montrent que <strong>plus de 40 % des cyberattaques visent des TPE / PME</strong>. Pourquoi ?
+            Les TPE/PME/ETI ont souvent la même dépendance au numérique que les grands groupes, avec moins de
+            marge financière pour absorber une crise. Résultat : un sinistre peut peser lourd sur la trésorerie.
           </p>
 
           <ul className="list-disc ml-6 space-y-2 text-blue-200 mb-6">
-            <li>Peu ou pas de service informatique interne ;</li>
-            <li>mots de passe simples ou réutilisés ;</li>
-            <li>aucune vraie politique de sauvegarde ;</li>
-            <li>employés peu sensibilisés au phishing ;</li>
-            <li>fausse impression de “je suis trop petit pour intéresser les hackers”.</li>
+            <li>Arrêt d’activité difficilement absorbable ;</li>
+            <li>Dépendance forte aux flux de facturation ;</li>
+            <li>Exposition à des responsabilités contractuelles ;</li>
+            <li>Délais de paiement qui amplifient l’effet trésorerie ;</li>
+            <li>Moins de marge pour financer une crise sans assurance.</li>
           </ul>
 
           <p className="text-blue-200 leading-relaxed mb-8">
-            Pour un pirate, une petite entreprise est souvent <strong>plus simple à bloquer</strong> et{" "}
-            <strong>plus rapide à rançonner</strong> qu’un grand groupe très protégé.
+            L’assurance cyber vise à transformer un choc potentiellement fatal en coût maîtrisé et indemnisable.
           </p>
 
           {/* Section 3 */}
@@ -131,35 +130,31 @@ export default function ArticleAssuranceCyber() {
 
           <div className="grid gap-6 md:grid-cols-2 mb-8">
             <div className="bg-white/5 rounded-2xl p-5">
-              <h3 className="font-semibold text-lg mb-2">1. Les frais techniques</h3>
-              <p className="text-blue-200 text-sm leading-relaxed">
-                Intervention d’experts pour analyser l’attaque, nettoyer vos systèmes, réinstaller les logiciels,
-                restaurer les sauvegardes et sécuriser à nouveau votre environnement.
-              </p>
+          <h3 className="font-semibold text-lg mb-2">1. Gestion de crise</h3>
+          <p className="text-blue-200 text-sm leading-relaxed">
+                Coordination des intervenants, assistance 24/7, communication et pilotage du dossier.
+          </p>
             </div>
 
             <div className="bg-white/5 rounded-2xl p-5">
-              <h3 className="font-semibold text-lg mb-2">2. Les pertes financières</h3>
-              <p className="text-blue-200 text-sm leading-relaxed">
-                Indemnisation de la perte de chiffre d’affaires liée à l’arrêt de votre activité, ainsi que des
-                frais supplémentaires engagés pour redémarrer (matériel, sous-traitance, renfort, etc.).
-              </p>
+          <h3 className="font-semibold text-lg mb-2">2. Les pertes financières</h3>
+          <p className="text-blue-200 text-sm leading-relaxed">
+                Indemnisation de la perte de chiffre d’affaires liée à l’arrêt d’activité et frais additionnels.
+          </p>
             </div>
 
             <div className="bg-white/5 rounded-2xl p-5">
-              <h3 className="font-semibold text-lg mb-2">3. La responsabilité & le juridique</h3>
-              <p className="text-blue-200 text-sm leading-relaxed">
-                Prise en charge des frais d’avocat, des procédures et, selon les contrats, des conséquences
-                d’une fuite de données client ou d’une mise en cause de votre responsabilité.
-              </p>
+          <h3 className="font-semibold text-lg mb-2">3. La responsabilité & le juridique</h3>
+          <p className="text-blue-200 text-sm leading-relaxed">
+                Prise en charge des frais d’avocat, procédures et responsabilités vis‑à‑vis des tiers.
+          </p>
             </div>
 
             <div className="bg-white/5 rounded-2xl p-5">
-              <h3 className="font-semibold text-lg mb-2">4. L’accompagnement humain</h3>
-              <p className="text-blue-200 text-sm leading-relaxed">
-                Accès à une cellule de crise, à des experts en cybersécurité et à des conseillers pour gérer la
-                communication avec vos clients et partenaires après l’attaque.
-              </p>
+          <h3 className="font-semibold text-lg mb-2">4. L’accompagnement humain</h3>
+          <p className="text-blue-200 text-sm leading-relaxed">
+                Accès à une cellule de crise et conseils pour gérer la communication avec clients et partenaires.
+          </p>
             </div>
           </div>
 
@@ -176,48 +171,46 @@ export default function ArticleAssuranceCyber() {
           </p>
 
           <p className="text-blue-200 leading-relaxed mb-8">
-            C’est souvent <strong>50× moins cher</strong> que le coût réel d’une cyberattaque : perte
-            d’exploitation, factures frauduleuses, interventions techniques, gestion de crise, image de marque…
+            C’est souvent <strong>50× moins cher</strong> que le coût réel d’un sinistre : pertes
+            d’exploitation, frais juridiques, gestion de crise, image de marque…
           </p>
 
           {/* Section 5 */}
           <h2 className="text-2xl lg:text-3xl font-bold mt-10 mb-4">
-            Antivirus ou assurance cyber : les deux sont-ils nécessaires ?
+            Conditions d’éligibilité et obligations de l’assuré
           </h2>
           <p className="text-blue-200 leading-relaxed mb-4">
-            On confond souvent les deux, alors qu’ils n’ont pas du tout le même rôle :
+            Les contrats prévoient des obligations et prérequis. Ils doivent être connus avant souscription :
           </p>
 
           <ul className="list-disc ml-6 space-y-2 text-blue-200 mb-6">
             <li>
-              <strong>Antivirus / cybersécurité</strong> : empêche ou limite l’attaque quand c’est possible ;
+              <strong>Obligations de l’assuré</strong> : respect des déclarations et des procédures contractuelles ;
             </li>
             <li>
-              <strong>Assurance cyber</strong> : intervient quand l’attaque a réussi et protège financièrement
-              votre entreprise.
+              <strong>Pré-requis d’éligibilité</strong> : exigences minimales fixées par l’assureur.
             </li>
           </ul>
 
           <p className="text-blue-200 leading-relaxed mb-8">
-            Se contenter d’un antivirus, c’est un peu comme mettre une alarme chez soi mais ne jamais assurer la maison.
+            Mieux vaut clarifier ces points pour éviter toute mauvaise surprise en cas de sinistre.
           </p>
 
           {/* Section 6 */}
           <h2 className="text-2xl lg:text-3xl font-bold mt-10 mb-4">Exemple concret</h2>
           <p className="text-blue-200 leading-relaxed mb-4">
-            Un artisan se fait pirater sa messagerie pro. Les hackers en profitent pour envoyer de fausses factures
-            à ses clients, en remplaçant simplement le RIB par le leur.
+            Un artisan subit une fraude au paiement : des factures sont réglées sur un mauvais compte.
           </p>
 
           <ul className="list-disc ml-6 space-y-2 text-blue-200 mb-6">
             <li>7 900 € de factures payées sur le mauvais compte ;</li>
-            <li>2 semaines d’activité bloquée le temps de comprendre ;</li>
+            <li>2 semaines d’activité ralentie le temps de traiter les litiges ;</li>
             <li>3 clients perdus qui se sentent trompés.</li>
           </ul>
 
           <p className="text-blue-200 leading-relaxed mb-8">
-            Avec une assurance cyber, les pertes financières et les frais d’accompagnement auraient pu être pris
-            en charge, et une équipe d’experts aurait été mobilisée dès les premières heures.
+            Avec une assurance cyber, les pertes financières et les frais d’accompagnement peuvent être pris
+            en charge selon les garanties prévues.
           </p>
 
           {/* Conclusion */}
@@ -225,9 +218,9 @@ export default function ArticleAssuranceCyber() {
             Faut-il vraiment une assurance cyber ?
           </h2>
           <p className="text-blue-200 leading-relaxed mb-8">
-            Si votre activité dépend d’un ordinateur, d’une messagerie, d’un logiciel de facturation ou de données
-            clients, la réponse est simple : <strong>oui</strong>. L’assurance cyber est aujourd’hui aussi
-            stratégique qu’une RC Pro pour une entreprise moderne.
+            Si votre activité dépend de la continuité de vos flux et de vos données professionnelles, la réponse
+            est simple : <strong>oui</strong>. L’assurance cyber est aujourd’hui aussi stratégique qu’une RC Pro
+            pour une entreprise moderne.
           </p>
 
           {/* CTA */}
