@@ -82,7 +82,7 @@ export default function FinalCTA({ onOpenDrawer }: FinalCTAProps) {
           <div className="flex items-center justify-center gap-6 mt-4">
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/astuce.cyber"
+              href="https://www.instagram.com/astuce.assurance.cyber"
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition"
@@ -95,7 +95,7 @@ export default function FinalCTA({ onOpenDrawer }: FinalCTAProps) {
 
             {/* TikTok */}
             <a
-              href="https://www.tiktok.com/@astuce.cyber"
+              href="https://www.tiktok.com/@astuce.assurance.cyber"
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition"
