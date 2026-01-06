@@ -161,32 +161,32 @@ export default function MainNavbar() {
 
       {openMenu && (
         <div className="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur">
-          <div className="px-4 py-4 flex flex-col gap-3 text-sm text-blue-100">
+          <div className="px-4 py-4 flex flex-col items-center gap-3 text-sm text-blue-100">
             <Link
               to="/"
               onClick={() => setOpenMenu(false)}
-              className={`${navBaseClass} ${isHome ? navActiveClass : navInactiveClass}`}
+              className={`${navBaseClass} w-full text-center ${isHome ? navActiveClass : navInactiveClass}`}
             >
               Accueil
             </Link>
             <Link
               to="/audit-cyber"
               onClick={() => setOpenMenu(false)}
-              className={`${navBaseClass} ${isAudit ? navActiveClass : navInactiveClass}`}
+              className={`${navBaseClass} w-full text-center ${isAudit ? navActiveClass : navInactiveClass}`}
             >
               Demande de couverture
             </Link>
             <Link
               to="/assistance"
               onClick={() => setOpenMenu(false)}
-              className={`${navBaseClass} ${isAssistance ? navActiveClass : navInactiveClass}`}
+              className={`${navBaseClass} w-full text-center ${isAssistance ? navActiveClass : navInactiveClass}`}
             >
               Assistance
             </Link>
             <Link
               to="/articles"
               onClick={() => setOpenMenu(false)}
-              className={navBaseClass}
+              className={`${navBaseClass} w-full text-center`}
             >
               Tous les articles
             </Link>
@@ -197,7 +197,7 @@ export default function MainNavbar() {
                   scrollToId("audit");
                   setOpenMenu(false);
                 }}
-                className={`${navBaseClass} ${
+                className={`${navBaseClass} w-full text-center ${
                   activeHash === "#audit" ? navActiveClass : navInactiveClass
                 }`}
               >
@@ -207,7 +207,7 @@ export default function MainNavbar() {
               <Link
                 to="/#audit"
                 onClick={() => setOpenMenu(false)}
-                className={navBaseClass}
+                className={`${navBaseClass} w-full text-center`}
               >
                 Nous contacter
               </Link>
@@ -219,7 +219,7 @@ export default function MainNavbar() {
                   scrollToId("faq");
                   setOpenMenu(false);
                 }}
-                className={`${navBaseClass} ${
+                className={`${navBaseClass} w-full text-center ${
                   activeHash === "#faq" ? navActiveClass : navInactiveClass
                 }`}
               >
@@ -229,7 +229,7 @@ export default function MainNavbar() {
               <Link
                 to="/#faq"
                 onClick={() => setOpenMenu(false)}
-                className={navBaseClass}
+                className={`${navBaseClass} w-full text-center`}
               >
                 FAQ
               </Link>
