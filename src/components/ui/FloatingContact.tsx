@@ -159,16 +159,32 @@ export default function FloatingContact() {
                     className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
                     placeholder="Domaine d'activité (ex : e-commerce)"
                   />
-                  <select
-                    required
-                    value={formValues.client_type}
-                    onChange={(e) => handleChange("client_type", e.target.value)}
-                    className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
-                  >
-                    <option value="">Vous êtes</option>
-                    <option value="Professionnel">Professionnel</option>
-                    <option value="Particulier">Particulier</option>
-                  </select>
+                  <div className="relative">
+                    <select
+                      required
+                      value={formValues.client_type}
+                      onChange={(e) => handleChange("client_type", e.target.value)}
+                      className="w-full appearance-none rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
+                    >
+                      <option value="">Vous êtes</option>
+                      <option value="Professionnel">Professionnel</option>
+                      <option value="Particulier">Particulier</option>
+                    </select>
+                    <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-blue-200/70">
+                      <svg
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-4 w-4"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
                 {/* Honeypot anti-bot */}
                 <input type="text" name="hp" className="hidden" tabIndex={-1} autoComplete="off" />

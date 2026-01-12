@@ -253,21 +253,37 @@ export default function MultiStepForm({
                 <label className="text-sm font-medium text-blue-100" htmlFor="clientType">
                   Vous êtes
                 </label>
-                <select
-                  id="clientType"
-                  name="clientType"
-                  required
-                  value={values.clientType}
-                  onChange={(event) =>
-                    setValues((prev) => ({ ...prev, clientType: event.target.value }))
-                  }
-                  onBlur={() => setTouched((prev) => ({ ...prev, clientType: true }))}
-                  className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
-                >
-                  <option value="">Sélectionner</option>
-                  <option value="Professionnel">Professionnel</option>
-                  <option value="Particulier">Particulier</option>
-                </select>
+                <div className="relative">
+                  <select
+                    id="clientType"
+                    name="clientType"
+                    required
+                    value={values.clientType}
+                    onChange={(event) =>
+                      setValues((prev) => ({ ...prev, clientType: event.target.value }))
+                    }
+                    onBlur={() => setTouched((prev) => ({ ...prev, clientType: true }))}
+                    className="w-full appearance-none rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
+                  >
+                    <option value="">Sélectionner</option>
+                    <option value="Professionnel">Professionnel</option>
+                    <option value="Particulier">Particulier</option>
+                  </select>
+                  <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-blue-200/70">
+                    <svg
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-4 w-4"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </div>
                 {touched.clientType && errors.clientType ? (
                   <p className="text-xs text-red-400">{errors.clientType}</p>
                 ) : null}
