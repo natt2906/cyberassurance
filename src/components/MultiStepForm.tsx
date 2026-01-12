@@ -14,11 +14,15 @@ type MultiStepFormProps = {
 type FormValues = {
   name: string;
   phone: string;
+  activityDomain: string;
+  clientType: string;
 };
 
 const initialValues: FormValues = {
   name: "",
   phone: "",
+  activityDomain: "",
+  clientType: "",
 };
 
 const validatePhoneFR = (value: string) => {
@@ -56,6 +60,8 @@ export default function MultiStepForm({
           ? ""
           : "Numéro invalide. Format attendu : 06 12 34 56 78 ou +33 6 12 34 56 78."
         : "Champ obligatoire.",
+      activityDomain: values.activityDomain.trim() ? "" : "Champ obligatoire.",
+      clientType: values.clientType.trim() ? "" : "Champ obligatoire.",
     }),
     [values, phoneValid]
   );
@@ -70,12 +76,13 @@ export default function MultiStepForm({
     }));
   };
 
-  const canSubmit = !errors.name && !errors.phone && phoneValid;
+  const canSubmit =
+    !errors.name && !errors.phone && !errors.activityDomain && !errors.clientType && phoneValid;
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError(null);
-    markTouched(["name", "phone"]);
+    markTouched(["name", "phone", "activityDomain", "clientType"]);
     if (!canSubmit) return;
     setIsSubmitting(true);
 
@@ -96,6 +103,8 @@ export default function MultiStepForm({
           fields: [
             { name: "Nom et prénom", value: values.name || "-", inline: true },
             { name: "Téléphone", value: values.phone || "-", inline: true },
+            { name: "Domaine d'activité", value: values.activityDomain || "-", inline: true },
+            { name: "Type de client", value: values.clientType || "-", inline: true },
           ],
           footer: {
             text: "Source: formulaire principal",
@@ -109,6 +118,8 @@ export default function MultiStepForm({
       await sendLead(payload);
       trackLeadSubmit({
         source: trackingSource,
+        activity_domain: values.activityDomain,
+        client_type: values.clientType,
       });
       trackAdsConversion();
       pushDataLayerEvent("lead_form_submit_success", { source: trackingSource });
@@ -236,6 +247,51 @@ export default function MultiStepForm({
                     Format attendu : 06 12 34 56 78 ou +33 6 12 34 56 78.
                   </p>
                 )}
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-blue-100" htmlFor="clientType">
+                  Vous êtes
+                </label>
+                <select
+                  id="clientType"
+                  name="clientType"
+                  required
+                  value={values.clientType}
+                  onChange={(event) =>
+                    setValues((prev) => ({ ...prev, clientType: event.target.value }))
+                  }
+                  onBlur={() => setTouched((prev) => ({ ...prev, clientType: true }))}
+                  className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
+                >
+                  <option value="">Sélectionner</option>
+                  <option value="Professionnel">Professionnel</option>
+                  <option value="Particulier">Particulier</option>
+                </select>
+                {touched.clientType && errors.clientType ? (
+                  <p className="text-xs text-red-400">{errors.clientType}</p>
+                ) : null}
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-blue-100" htmlFor="activityDomain">
+                  Domaine d'activité
+                </label>
+                <input
+                  id="activityDomain"
+                  name="activityDomain"
+                  required
+                  value={values.activityDomain}
+                  onChange={(event) =>
+                    setValues((prev) => ({ ...prev, activityDomain: event.target.value }))
+                  }
+                  onBlur={() => setTouched((prev) => ({ ...prev, activityDomain: true }))}
+                  className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
+                  placeholder="Ex : e-commerce, santé, conseil"
+                />
+                {touched.activityDomain && errors.activityDomain ? (
+                  <p className="text-xs text-red-400">{errors.activityDomain}</p>
+                ) : null}
               </div>
 
               {/* Honeypot anti-bot */}

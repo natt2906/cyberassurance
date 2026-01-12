@@ -36,18 +36,49 @@ export const trackAdsConversion = () => {
 type LeadSubmitParams = {
   company_size?: string;
   sector?: string;
+  activity_domain?: string;
+  client_type?: string;
   wants_advice?: boolean;
   source?: string;
 };
 
-export const trackLeadSubmit = ({ company_size, sector, wants_advice, source }: LeadSubmitParams) => {
+export const trackLeadSubmit = ({
+  company_size,
+  sector,
+  activity_domain,
+  client_type,
+  wants_advice,
+  source,
+}: LeadSubmitParams) => {
   if (typeof window === "undefined") return;
-  const payload = { event: "lead_submit", company_size, sector, wants_advice, source };
+  const payload = {
+    event: "lead_submit",
+    company_size,
+    sector,
+    activity_domain,
+    client_type,
+    wants_advice,
+    source,
+  };
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push(payload);
   if (!window.gtag) return;
-  window.gtag("event", "generate_lead", { company_size, sector, wants_advice, source });
-  window.gtag("event", "lead_submit", { company_size, sector, wants_advice, source });
+  window.gtag("event", "generate_lead", {
+    company_size,
+    sector,
+    activity_domain,
+    client_type,
+    wants_advice,
+    source,
+  });
+  window.gtag("event", "lead_submit", {
+    company_size,
+    sector,
+    activity_domain,
+    client_type,
+    wants_advice,
+    source,
+  });
 };
 
 export const pushDataLayerEvent = (event: string, params?: Record<string, unknown>) => {

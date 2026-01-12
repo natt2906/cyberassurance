@@ -4,20 +4,16 @@ import { trackAdsConversion, trackLeadSubmit } from "../../analytics/gtag";
 
 type ConsentPrefs = {
   name: string;
-  email: string;
   phone: string;
-  size: string;
-  sector: string;
-  wants_advice: boolean;
+  activity_domain: string;
+  client_type: string;
 };
 
 const initialForm: ConsentPrefs = {
   name: "",
-  email: "",
   phone: "",
-  size: "1-5",
-  sector: "services",
-  wants_advice: false,
+  activity_domain: "",
+  client_type: "",
 };
 
 export default function FloatingContact() {
@@ -47,15 +43,9 @@ export default function FloatingContact() {
           color: 5814783,
           fields: [
             { name: "Nom et prénom", value: formValues.name || "-", inline: true },
-            { name: "Email", value: formValues.email || "-", inline: true },
             { name: "Téléphone", value: formValues.phone || "-", inline: true },
-            { name: "Taille de l'entreprise", value: formValues.size || "-", inline: true },
-            { name: "Secteur d'activité", value: formValues.sector || "-", inline: true },
-            {
-              name: "Souhaite conseils personnalisés",
-              value: formValues.wants_advice ? "Oui" : "Non",
-              inline: true,
-            },
+            { name: "Domaine d'activité", value: formValues.activity_domain || "-", inline: true },
+            { name: "Type de client", value: formValues.client_type || "-", inline: true },
           ],
           footer: {
             text: "Source: bouton flottant",
@@ -68,9 +58,8 @@ export default function FloatingContact() {
     try {
       await sendLead(payload);
       trackLeadSubmit({
-        company_size: formValues.size,
-        sector: formValues.sector,
-        wants_advice: formValues.wants_advice,
+        activity_domain: formValues.activity_domain,
+        client_type: formValues.client_type,
       });
       trackAdsConversion();
       setHasSubmitted(true);
@@ -149,18 +138,11 @@ export default function FloatingContact() {
               <form className="grid gap-4" onSubmit={handleSubmit}>
                 <div className="grid gap-3 md:grid-cols-2">
                   <input
+                    required
                     value={formValues.name}
                     onChange={(e) => handleChange("name", e.target.value)}
                     className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
                     placeholder="Nom et prénom"
-                  />
-                  <input
-                    required
-                    type="email"
-                    value={formValues.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
-                    placeholder="Email professionnel"
                   />
                   <input
                     required
@@ -170,40 +152,24 @@ export default function FloatingContact() {
                     className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
                     placeholder="Téléphone"
                   />
+                  <input
+                    required
+                    value={formValues.activity_domain}
+                    onChange={(e) => handleChange("activity_domain", e.target.value)}
+                    className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
+                    placeholder="Domaine d'activité (ex : e-commerce)"
+                  />
                   <select
-                    value={formValues.size}
-                    onChange={(e) => handleChange("size", e.target.value)}
+                    required
+                    value={formValues.client_type}
+                    onChange={(e) => handleChange("client_type", e.target.value)}
                     className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
                   >
-                    <option value="1-5">1 à 5 personnes</option>
-                    <option value="6-20">6 à 20 personnes</option>
-                    <option value="21-50">21 à 50 personnes</option>
-                    <option value="51-250">51 à 250 personnes</option>
-                    <option value="251+">Plus de 250 personnes</option>
-                  </select>
-                  <select
-                    value={formValues.sector}
-                    onChange={(e) => handleChange("sector", e.target.value)}
-                    className="rounded-xl bg-slate-950/60 border border-blue-500/40 px-4 py-3 text-sm text-white outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400"
-                  >
-                    <option value="services">Services / Conseil</option>
-                    <option value="commerce">Commerce / E-commerce</option>
-                    <option value="sante">Santé / Médical</option>
-                    <option value="btp">BTP / Industrie</option>
-                    <option value="tech">Tech / SaaS</option>
-                    <option value="autre">Autre</option>
+                    <option value="">Vous êtes</option>
+                    <option value="Professionnel">Professionnel</option>
+                    <option value="Particulier">Particulier</option>
                   </select>
                 </div>
-                <label className="inline-flex items-start gap-3 text-xs text-blue-200/80">
-                  <input
-                    type="checkbox"
-                    name="wants_advice"
-                    checked={formValues.wants_advice}
-                    onChange={(e) => handleChange("wants_advice", e.target.checked)}
-                    className="mt-0.5 h-4 w-4 rounded border-blue-500/40 bg-slate-950/60 text-blue-500 focus:ring-blue-500"
-                  />
-                  Je souhaite recevoir des conseils personnalisés à l’issue de ma demande.
-                </label>
                 {/* Honeypot anti-bot */}
                 <input type="text" name="hp" className="hidden" tabIndex={-1} autoComplete="off" />
 
